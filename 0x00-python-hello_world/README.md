@@ -23,3 +23,6 @@ Printing concatenated strings.
 
 ## Copy - Cut - Paste
 Using string slicing to get parts of a word.
+
+## Create a New Sentence
+Slicing string repeatedly on one line.
