@@ -32,3 +32,6 @@ Printing the Zen of Python easter egg.
 
 ## Linked List Cycle
 Detecting whether a linked list loops back on itself.
+
+## Hello, `write`
+Using lower-level interfaces in Python to print a string.
