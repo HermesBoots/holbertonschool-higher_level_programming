@@ -38,3 +38,6 @@ Using lower-level interfaces in Python to print a string.
 
 ## Compile
 Compiling a Python script to byte code.
+
+## ByteCode -> Python #1
+Writing Python source code to exactly emit some Python bytecode.
