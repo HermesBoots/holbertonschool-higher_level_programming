@@ -5,3 +5,6 @@ Writing a short shell script to execute a Python script.
 
 ## Run Inline
 Writing a shell script to execute Python code.
+
+## Hello, `print`
+Printing a simple message using `print`.
