@@ -8,3 +8,6 @@ Writing a shell script to execute Python code.
 
 ## Hello, `print`
 Printing a simple message using `print`.
+
+## Print Integer
+Printing a string containing a number using Python's equivalent of `printf`.
