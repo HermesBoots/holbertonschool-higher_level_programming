@@ -29,3 +29,6 @@ Slicing string repeatedly on one line.
 
 ## Easter Egg
 Printing the Zen of Python easter egg.
+
+## Linked List Cycle
+Detecting whether a linked list loops back on itself.
