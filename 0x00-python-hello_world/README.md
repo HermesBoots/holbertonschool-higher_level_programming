@@ -26,3 +26,6 @@ Using string slicing to get parts of a word.
 
 ## Create a New Sentence
 Slicing string repeatedly on one line.
+
+## Easter Egg
+Printing the Zen of Python easter egg.
