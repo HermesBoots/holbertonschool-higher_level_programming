@@ -14,3 +14,6 @@ Printing a string containing a number using Python's equivalent of `printf`.
 
 ## Print Float
 Printing a string containing a floating-point number.
+
+## Print String
+Printing a string in unusual ways using string "arithmetic" operators.
