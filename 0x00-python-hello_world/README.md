@@ -20,3 +20,6 @@ Printing a string in unusual ways using string "arithmetic" operators.
 
 ## Play with Strings
 Printing concatenated strings.
+
+## Copy - Cut - Paste
+Using string slicing to get parts of a word.
