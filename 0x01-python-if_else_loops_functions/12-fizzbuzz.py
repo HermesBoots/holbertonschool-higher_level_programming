@@ -10,4 +10,4 @@ def fizzy(number):
 
 
 def fizzbuzz():
-    print(''.join(fizzy(i) for i in range(1, 101)))
+    print(''.join(fizzy(i) for i in range(1, 101)), end='')
