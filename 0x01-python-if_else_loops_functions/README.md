@@ -35,3 +35,6 @@ Exponentiation in a function.
 
 ## Fizz Buzz
 Doing Fizz Buzz.
+
+## Smile in the Mirror
+Printing the alphabet backwards, alternating case.
