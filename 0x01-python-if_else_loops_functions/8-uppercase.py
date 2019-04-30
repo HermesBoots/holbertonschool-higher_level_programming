@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-def toupper(char):
-    return chr(ord(char) - 32) if char >= 'a' and char <= 'z' else char
-
-
 def uppercase(str):
-    print(''.join(toupper(c) for c in str))
+    for c in str:
+        i = ord(c)
+        print('{:c}'.format(i - 32 if 97 <= i <= 122 else i), end='')
+    print()
