@@ -8,3 +8,6 @@ Getting the last digit of a random number.
 
 ## I Sometimes Suffer from Insomnia. And When I Can't Fall Asleep, I Play What I Call the Alphabet Game
 Printing the alphabet in lower case.
+
+## Hexadecimal Printing
+Printing numbers in base 10 and base 16.
