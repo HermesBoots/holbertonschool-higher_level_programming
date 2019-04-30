@@ -32,3 +32,6 @@ Adding two numbers in a function.
 
 ## `a ^ b`
 Exponentiation in a function.
+
+## Fizz Buzz
+Doing Fizz Buzz.
