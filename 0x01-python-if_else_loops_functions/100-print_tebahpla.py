@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-print(
-    ''.join(
-        chr(a) + chr(b) for a, b in zip(
-            range(122, 96, -2),
-            range(89, 64, -2)
-        )
-    ),
-    end=''
-)
+index = 25
+for little, big in zip(range(122, 96, -1), range(90, 64, -1)):
+    print('{:c}'.format(little if index % 2 else big), end='')
+    index -= 1
