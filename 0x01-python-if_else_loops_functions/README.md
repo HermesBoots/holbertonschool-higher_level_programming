@@ -23,3 +23,6 @@ Checking if a character is lower case.
 
 ## To Uppercase
 Converting a string to upper case.
+
+## There Are Only 3 Colors, 10 Digits, and 7 Notes; It's What We Do with Them That's Important
+Printing number's last digit.
