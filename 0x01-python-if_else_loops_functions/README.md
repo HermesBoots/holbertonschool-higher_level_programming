@@ -11,3 +11,6 @@ Printing the alphabet in lower case.
 
 ## Hexadecimal Printing
 Printing numbers in base 10 and base 16.
+
+## 00...99
+Printing two-digit whole numbers separated by commas.
