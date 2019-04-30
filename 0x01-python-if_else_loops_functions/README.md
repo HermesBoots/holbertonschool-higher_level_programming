@@ -14,3 +14,6 @@ Printing numbers in base 10 and base 16.
 
 ## 00...99
 Printing two-digit whole numbers separated by commas.
+
+## Inventing Is a Combination of Brains and Materials. The More Brains You Use, the Less Material You Need
+Printing unique combinations of two digits.
