@@ -41,3 +41,6 @@ Printing the alphabet backwards, alternating case.
 
 ## Remove at Position
 Removing a character at a given position from a string.
+
+## ByteCode -> Python #2
+Writing Python source code with conditionals that emits exact byte code.
