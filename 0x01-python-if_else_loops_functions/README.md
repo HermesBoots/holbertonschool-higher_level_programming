@@ -29,3 +29,6 @@ Printing number's last digit.
 
 ## `a + b`
 Adding two numbers in a function.
+
+## `a ^ b`
+Exponentiation in a function.
