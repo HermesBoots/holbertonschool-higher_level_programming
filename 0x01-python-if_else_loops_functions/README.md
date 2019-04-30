@@ -20,3 +20,6 @@ Printing unique combinations of two digits.
 
 ## `islower`
 Checking if a character is lower case.
+
+## To Uppercase
+Converting a string to upper case.
