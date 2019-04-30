@@ -38,3 +38,6 @@ Doing Fizz Buzz.
 
 ## Smile in the Mirror
 Printing the alphabet backwards, alternating case.
+
+## Remove at Position
+Removing a character at a given position from a string.
