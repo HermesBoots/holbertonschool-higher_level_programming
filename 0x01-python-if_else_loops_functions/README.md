@@ -17,3 +17,6 @@ Printing two-digit whole numbers separated by commas.
 
 ## Inventing Is a Combination of Brains and Materials. The More Brains You Use, the Less Material You Need
 Printing unique combinations of two digits.
+
+## `islower`
+Checking if a character is lower case.
