@@ -5,7 +5,7 @@ if __name__ == '__main__':
     argc = len(argv) - 1
     ops = {'+': add, '-': sub, '*': mul, '/': div}
     if argc != 3:
-        print('Usage: ' + argv[0] + ' <a> <operator> <b>')
+        print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
     a, op, b = argv[1:]
     if len(op) != 1 or op not in ops:
