@@ -9,7 +9,7 @@ if __name__ == '__main__':
         exit(1)
     a, op, b = argv[1:]
     if len(op) != 1 or op not in ops:
-        print('Unknown operator. Available operators: +, -, *, and /')
+        print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
     a = int(a)
     b = int(b)
