@@ -13,4 +13,4 @@ if __name__ == '__main__':
         exit(1)
     a = int(a)
     b = int(b)
-    print('{} {} {} = {}'.format(a, op, b, ops[op](a, b)))
+    print('{:d} {:s} {:d} = {:d}'.format(a, op, b, ops[op](a, b)))
