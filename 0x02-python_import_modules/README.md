@@ -17,3 +17,6 @@ Printing names in compiled module.
 
 ## Everything Can Be Imported
 Importing a variable from a module.
+
+## Build My Own Calculator
+Making a command-line calculator.
