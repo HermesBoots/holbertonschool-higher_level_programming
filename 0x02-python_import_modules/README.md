@@ -26,3 +26,6 @@ Printing without the `print` function or imports.
 
 ## ByteCode -> Python #3
 Writing a function that produces exact Python byte code.
+
+## Fast Alphabet
+Printing the upper case alphabet using an existing module.
