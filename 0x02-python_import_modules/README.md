@@ -20,3 +20,6 @@ Importing a variable from a module.
 
 ## Build My Own Calculator
 Making a command-line calculator.
+
+## Easy Print
+Printing without the `print` function or imports.
