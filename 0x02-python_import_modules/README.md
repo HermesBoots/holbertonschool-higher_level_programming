@@ -23,3 +23,6 @@ Making a command-line calculator.
 
 ## Easy Print
 Printing without the `print` function or imports.
+
+## ByteCode -> Python #3
+Writing a function that produces exact Python byte code.
