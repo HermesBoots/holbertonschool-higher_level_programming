@@ -14,3 +14,6 @@ Performing arbitrary-precision addition of command-line arguments.
 
 ## Who Are You?
 Printing names in compiled module.
+
+## Everything Can Be Imported
+Importing a variable from a module.
