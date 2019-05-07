@@ -23,3 +23,6 @@ Printing all elements in a two-dimensional list.
 
 ## Tuples Addition
 Adding values at matching indexes in tuples.
+
+## More Returns!
+Returning a string's length and its first character at once.
