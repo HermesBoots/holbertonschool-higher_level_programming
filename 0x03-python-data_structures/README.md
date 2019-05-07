@@ -35,3 +35,6 @@ Making a compression list based on whether integers in a list are odd or even.
 
 ## Delete At
 Deleting an item in a list at a valid index.
+
+## Switch
+Switching two values with only one line.
