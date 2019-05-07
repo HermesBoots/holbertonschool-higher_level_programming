@@ -39,5 +39,8 @@ Deleting an item in a list at a valid index.
 ## Switch
 Switching two values with only one line.
 
+## Linked List Palindrome
+Determining whether a linked list is a palindrome.
+
 ## CPython #0: Python Lists
 Printing information about a Python list from C.
