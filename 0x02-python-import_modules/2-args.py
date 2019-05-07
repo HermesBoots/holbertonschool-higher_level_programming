@@ -7,5 +7,5 @@ if __name__ == '__main__':
         's' if argc != 1 else '',
         '.' if argc == 0 else ':'
     ))
-    for index, argument in enumerate(argv[1:]):
-        print('{}: {}'.format(index + 1, argument))
+    for index, argument in enumerate(argv[1:], 1):
+        print('{}: {}'.format(index, argument))
