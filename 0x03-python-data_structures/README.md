@@ -8,3 +8,6 @@ Getting an item at an index only if that index is valid.
 
 ## Replace Element
 Replacing an element in a list at a valid index.
+
+## Print a List of Integers... in Reverse!
+Printing each item in a list in reverse order.
