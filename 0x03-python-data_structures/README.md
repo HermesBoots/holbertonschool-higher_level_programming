@@ -17,3 +17,6 @@ Replacing an element in a list and returning a copy with the change without modi
 
 ## Can You C Me Now?
 Removing C letters from a string.
+
+## Lists of Lists = Matrix
+Printing all elements in a two-dimensional list.
