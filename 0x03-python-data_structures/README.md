@@ -29,3 +29,6 @@ Returning a string's length and its first character at once.
 
 ## Find the Max
 Returning the maximum value in a list.
+
+## Only by 2
+Making a compression list based on whether integers in a list are odd or even.
