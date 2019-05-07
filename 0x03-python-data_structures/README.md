@@ -14,3 +14,6 @@ Printing each item in a list in reverse order.
 
 ## Replace in Copy
 Replacing an element in a list and returning a copy with the change without modifying the original.
+
+## Can You C Me Now?
+Removing C letters from a string.
