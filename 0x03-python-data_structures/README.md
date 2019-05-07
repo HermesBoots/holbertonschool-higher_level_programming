@@ -26,3 +26,6 @@ Adding values at matching indexes in tuples.
 
 ## More Returns!
 Returning a string's length and its first character at once.
+
+## Find the Max
+Returning the maximum value in a list.
