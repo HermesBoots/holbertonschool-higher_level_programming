@@ -14,3 +14,6 @@ Finding the elements common to two sets.
 
 ## Only Differents
 Finding the elements that are unique to each set.
+
+## Number of Keys
+Getting the number of keys in a dictionary.
