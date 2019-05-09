@@ -44,3 +44,6 @@ Square all values in a matrix using `map`.
 
 ## Delete by Value
 Delete items in a dictionary based on keys.
+
+## CPython #1: PyBytesObject
+Printing information about Python `list` and `bytes` objects from C code.
