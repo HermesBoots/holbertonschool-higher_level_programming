@@ -41,3 +41,6 @@ Getting the weighted average of a series of numbers.
 
 ## Squared by Using `map`
 Square all values in a matrix using `map`.
+
+## Delete by Value
+Delete items in a dictionary based on keys.
