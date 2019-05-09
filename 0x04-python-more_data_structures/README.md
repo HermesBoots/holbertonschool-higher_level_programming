@@ -17,3 +17,6 @@ Finding the elements that are unique to each set.
 
 ## Number of Keys
 Getting the number of keys in a dictionary.
+
+## Print Sorted Dictionary
+Printing a dictionary's keys and values in alphabetical order by key.
