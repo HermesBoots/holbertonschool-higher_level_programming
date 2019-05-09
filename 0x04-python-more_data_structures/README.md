@@ -26,3 +26,6 @@ Replacing or adding a new value in a dictionary.
 
 ## Simple Delete by Key
 Deleting a value in a dictionary.
+
+## Multiply by 2
+Copying a dictionary and multiplying all its values by 2.
