@@ -36,6 +36,9 @@ Returning maximum value in a dictionary.
 ## Multiply by Using `map`
 Copying a list and multiplying its elements by 2 using `map`.
 
+## Roman to Integer
+Convert a Roman numeral string to an integer.
+
 ## Weighted Average!
 Getting the weighted average of a series of numbers.
 
