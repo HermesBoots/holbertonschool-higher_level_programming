@@ -29,3 +29,6 @@ Deleting a value in a dictionary.
 
 ## Multiply by 2
 Copying a dictionary and multiplying all its values by 2.
+
+## Best Score
+Returning maximum value in a dictionary.
