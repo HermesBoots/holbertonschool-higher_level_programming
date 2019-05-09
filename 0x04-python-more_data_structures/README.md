@@ -8,3 +8,6 @@ Replacing elements in a list with others.
 
 ## Unique Addition
 Finding the sum of the unique integers in a list.
+
+## Present in Both
+Finding the elements common to two sets.
