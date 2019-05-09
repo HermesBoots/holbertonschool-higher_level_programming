@@ -32,3 +32,6 @@ Copying a dictionary and multiplying all its values by 2.
 
 ## Best Score
 Returning maximum value in a dictionary.
+
+## Multiply by Using `map`
+Copying a list and multiplying its elements by 2 using `map`.
