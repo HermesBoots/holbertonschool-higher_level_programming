@@ -20,3 +20,6 @@ Getting the number of keys in a dictionary.
 
 ## Print Sorted Dictionary
 Printing a dictionary's keys and values in alphabetical order by key.
+
+## Update Dictionary
+Replacing or adding a new value in a dictionary.
