@@ -11,3 +11,6 @@ Finding the sum of the unique integers in a list.
 
 ## Present in Both
 Finding the elements common to two sets.
+
+## Only Differents
+Finding the elements that are unique to each set.
