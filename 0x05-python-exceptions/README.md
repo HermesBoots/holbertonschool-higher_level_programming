@@ -20,3 +20,6 @@ Raising a TypeError.
 
 ## Raise a Message
 Raising a NameError with a given error message.
+
+## Safe Integer Print with Error Message
+Safely printing an integer and relaying the error message if it isn't one.
