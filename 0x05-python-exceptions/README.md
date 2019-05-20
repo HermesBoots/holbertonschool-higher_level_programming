@@ -14,3 +14,6 @@ Dividing 2 integers, handling exceptions.
 
 ## Divide a List
 Dividing sequential values in a list, handling exceptions.
+
+## Raise Exception
+Raising a TypeError.
