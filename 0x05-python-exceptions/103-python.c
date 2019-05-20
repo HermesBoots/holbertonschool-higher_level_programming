@@ -60,7 +60,7 @@ void print_python_float(PyObject *p)
 		fflush(stdout);
 		return;
 	}
-	repr = PyOS_double_to_string(f->ob_fval, 'r', 0, 0, NULL);
+	repr = PyOS_double_to_string(f->ob_fval, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
 	printf("  value: %s\n", repr);
 	PyMem_Free(repr);
 	fflush(stdout);
