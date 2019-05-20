@@ -26,7 +26,10 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 	printf("  size: %ld\n", o->ob_size);
-	printf("  trying string: %s\n", b->ob_sval);
+	printf("  trying string: ");
+	for (i = 0; i < o->ob_size && b->ob_sval[i] != '\0'; i++)
+		putchar(b->ob_sval[i] > 0 ? b->ob_sval[i] : '?');
+	putchar('\n');
 	limit = o->ob_size + 1 > 10 ? 10 : o->ob_size + 1;
 	printf("  first %ld bytes: ", limit);
 	for (i = 0; i < limit; i++)
