@@ -17,3 +17,6 @@ Dividing sequential values in a list, handling exceptions.
 
 ## Raise Exception
 Raising a TypeError.
+
+## Raise a Message
+Raising a NameError with a given error message.
