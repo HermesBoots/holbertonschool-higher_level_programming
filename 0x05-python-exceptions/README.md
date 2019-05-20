@@ -10,4 +10,7 @@ Printing an integer and handling exceptions if it isn't one.
 Printing integers in a list and handling exceptions if an item isn't a number or there aren't enough items to print.
 
 ## Integers Division with Debug
-Divide 2 integers, handling exceptions.
+Dividing 2 integers, handling exceptions.
+
+## Divide a List
+Dividing sequential values in a list, handling exceptions.
