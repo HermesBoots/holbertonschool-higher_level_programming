@@ -29,3 +29,6 @@ Calling another function and displaying the error message if it cased one.
 
 ## ByteCode -> Python #4
 Writing a Python function to exactly replicate existing Python byte code.
+
+## CPython #2: PyFloatObject
+Printing information about Python lists, floats, and byte strings from C code.
