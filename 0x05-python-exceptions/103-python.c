@@ -50,7 +50,7 @@ void print_python_bytes(PyObject *p)
 void print_python_float(PyObject *p)
 {
 	double fval;
-	long ival;
+	/*long ival;*/
 	PyFloatObject *f;
 
 	f = (PyFloatObject *)p;
@@ -62,21 +62,10 @@ void print_python_float(PyObject *p)
 		return;
 	}
 	fval = f->ob_fval;
-	ival = (long)fval;
-	printf("  value: ");
-	if (fval < 0.0)
-		printf("-%li", -ival);
+	if (fval - (long)fval == 0)
+		printf("  value: %.1f\n", fval);
 	else
-		printf("%li", ival);
-	fval -= ival;
-	fval *= 1000000000000000.0;
-	ival = round(fval);
-	while (ival % 10 == 0 && ival != 0)
-		ival /= 10;
-	if (ival < 0)
-		printf(".%ld\n", -ival);
-	else
-		printf(".%ld\n", ival);
+		printf("%.16g\n", fval);
 	fflush(stdout);
 }
 
