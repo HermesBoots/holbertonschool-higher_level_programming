@@ -26,3 +26,6 @@ Safely printing an integer and relaying the error message if it isn't one.
 
 ## Safe Function
 Calling another function and displaying the error message if it cased one.
+
+## ByteCode -> Python #4
+Writing a Python function to exactly replicate existing Python byte code.
