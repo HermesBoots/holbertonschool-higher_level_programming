@@ -49,6 +49,7 @@ void print_python_bytes(PyObject *p)
  */
 void print_python_float(PyObject *p)
 {
+	char *repr;
 	PyFloatObject *f;
 
 	f = (PyFloatObject *)p;
@@ -59,7 +60,9 @@ void print_python_float(PyObject *p)
 		fflush(stdout);
 		return;
 	}
-	printf("  value: %s\n", PyOS_double_to_string(f->ob_fval, 'r', 0, 0, NULL));
+	repr = PyOS_double_to_string(f->ob_fval, 'r', 0, 0, NULL);
+	printf("  value: %s\n", repr);
+	PyMem_Free(repr);
 	fflush(stdout);
 }
 
