@@ -22,6 +22,7 @@ void print_python_bytes(PyObject *p)
 	if (strcmp(p->ob_type->tp_name, "bytes") != 0)
 	{
 		puts("  [ERROR] Invalid Bytes Object");
+		fflush(stdout);
 		return;
 	}
 	printf("  size: %ld\n", o->ob_size);
@@ -35,6 +36,7 @@ void print_python_bytes(PyObject *p)
 			putchar(' ');
 	}
 	putchar('\n');
+	fflush(stdout);
 }
 
 
@@ -53,6 +55,7 @@ void print_python_float(PyObject *p)
 	if (strcmp(p->ob_type->tp_name, "float") != 0)
 	{
 		puts("  [ERROR] Invalid Float Object");
+		fflush(stdout);
 		return;
 	}
 	fval = f->ob_fval;
@@ -71,6 +74,7 @@ void print_python_float(PyObject *p)
 		printf(".%ld\n", -ival);
 	else
 		printf(".%ld\n", ival);
+	fflush(stdout);
 }
 
 
@@ -90,6 +94,7 @@ void print_python_list(PyObject *p)
 	if (strcmp(p->ob_type->tp_name, "list") != 0)
 	{
 		puts("  [ERROR] Invalid List Object");
+		fflush(stdout);
 		return;
 	}
 	printf("[*] Size of the Python List = %ld\n", o->ob_size);
@@ -102,4 +107,5 @@ void print_python_list(PyObject *p)
 		else if (strcmp(l->ob_item[i]->ob_type->tp_name, "float") == 0)
 			print_python_float(l->ob_item[i]);
 	}
+	fflush(stdout);
 }
