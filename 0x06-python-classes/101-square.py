@@ -26,9 +26,9 @@ class Square:
     @position.setter
     def position(self, val):
         if not isinstance(val, tuple) or len(val) != 2:
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError('position must be a tuple of 2 positive integer')
         if not isinstance(val[0], int) or not isinstance(val[1], int):
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError('position must be a tuple of 2 positive integer')
         self.__position = val
 
     @property
@@ -71,7 +71,7 @@ class Square:
 
         Returns:
             str: representation of the square using rows of # marks
-        
+
         """
 
         if self.__size == 0:
