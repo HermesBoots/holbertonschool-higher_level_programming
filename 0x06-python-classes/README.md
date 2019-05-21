@@ -29,3 +29,6 @@ Implementing seventh task using `__str__` instead of a custom method.
 
 ## Compare 2 Squares
 Implementing rich comparison operators on Square objects.
+
+## ByteCode -> Python #5
+A Python byte code task with a class.
