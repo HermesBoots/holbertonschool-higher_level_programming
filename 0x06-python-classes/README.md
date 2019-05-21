@@ -14,3 +14,6 @@ Adding a public method to use the private attribute.
 
 ## Access and Update Private Attribute
 Using a property to manage private attribute.
+
+## Printing a Square
+Adding a public method to print the square.
