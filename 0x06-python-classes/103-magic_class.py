@@ -5,7 +5,7 @@ import math
 
 class MagicClass:
     """class to recreate Python byte code"""
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """create new Circle object
 
         Args:
