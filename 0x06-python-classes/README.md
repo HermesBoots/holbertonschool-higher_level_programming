@@ -23,3 +23,6 @@ Tracking a position property and using it in the print method.
 
 ## Singly Linked List
 Creating a singly linked list in Python.
+
+## Print Square Instance
+Implementing seventh task using `__str__` instead of a custom method.
