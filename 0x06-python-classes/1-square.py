@@ -18,6 +18,9 @@ class Square:
 
         The size of the new square instance is hidden, to be accessed later.
 
+        Args:
+            size (int): the lengths of the square's sides
+
         """
 
         self.__size = size
