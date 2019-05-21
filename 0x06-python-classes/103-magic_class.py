@@ -3,6 +3,8 @@
 import math
 
 
+
+
 class MagicClass:
     """class to recreate Python byte code"""
     def __init__(self, radius):
