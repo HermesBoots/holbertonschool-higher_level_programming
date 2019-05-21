@@ -26,3 +26,6 @@ Creating a singly linked list in Python.
 
 ## Print Square Instance
 Implementing seventh task using `__str__` instead of a custom method.
+
+## Compare 2 Squares
+Implementing rich comparison operators on Square objects.
