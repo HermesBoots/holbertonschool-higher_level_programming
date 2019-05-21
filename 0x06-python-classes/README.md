@@ -17,3 +17,6 @@ Using a property to manage private attribute.
 
 ## Printing a Square
 Adding a public method to print the square.
+
+## Coordinates of a Square
+Tracking a position property and using it in the print method.
