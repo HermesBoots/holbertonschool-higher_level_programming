@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""The Square class
-
-Definition of a class that describes a square
-
-"""
 
 
 class Square:
