@@ -11,3 +11,6 @@ Validating the optional size argument.
 
 ## Area of a Square
 Adding a public method to use the private attribute.
+
+## Access and Update Private Attribute
+Using a property to manage private attribute.
