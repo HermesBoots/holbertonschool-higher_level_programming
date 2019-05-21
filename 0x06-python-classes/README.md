@@ -20,3 +20,6 @@ Adding a public method to print the square.
 
 ## Coordinates of a Square
 Tracking a position property and using it in the print method.
+
+## Singly Linked List
+Creating a singly linked list in Python.
