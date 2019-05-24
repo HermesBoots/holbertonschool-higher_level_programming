@@ -15,5 +15,8 @@ Printing a square made of # characters.
 ## Max Integer - `unittest`
 Writing a unit test for a function that finds the largest value in a list.
 
+## Matrix Multiplication
+Multiplying two matrices without imports.
+
 ## CPython #3: Python Strings
 Printing information about Python string objects from C code.
