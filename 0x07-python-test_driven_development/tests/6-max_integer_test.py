@@ -13,6 +13,8 @@ class TestMaxInt (unittest.TestCase):
     """the error message when extra arguments are given"""
     cantCompare = 'unorderable types: str() > int()'
     """the error message when non-comparable types are used"""
+    noLen = 'TypeError: object of type \'int\' has no len()'
+    """the error message when an int is passed instead of a collection"""
 
     def setUp(self):
         """Import the function to test"""
@@ -25,6 +27,10 @@ class TestMaxInt (unittest.TestCase):
     def test_noArgs(self):
         """Test that the function treats its default argument correctly"""
         self.assertIs(self.f(), None)
+
+    def test_notCollection(self):
+        with self.assertRaises(TypeError, msg=self.noLen):
+            self.f(2)
 
     def test_notComparable(self):
         """Test that non-comparable types fail in the right way"""
