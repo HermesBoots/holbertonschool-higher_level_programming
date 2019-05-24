@@ -12,6 +12,9 @@ Printing a first name with default last name.
 ## Print Square
 Printing a square made of # characters.
 
+## Text Indentation
+Splitting a string into paragraphs at certain punctuation.
+
 ## Max Integer - `unittest`
 Writing a unit test for a function that finds the largest value in a list.
 

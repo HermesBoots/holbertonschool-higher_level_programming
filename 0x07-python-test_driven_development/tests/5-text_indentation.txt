@@ -1,0 +1,44 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation('a', 'b')
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+>>> text_indentation(45)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation('hello')
+hello
+>>> text_indentation('hello. I\'m here')
+hello.
+<BLANKLINE>
+I'm here
+>>> text_indentation('mix.of?things:')
+mix.
+<BLANKLINE>
+of?
+<BLANKLINE>
+things:
+<BLANKLINE>
+>>> text_indentation('line1::line5')
+line1:
+<BLANKLINE>
+:
+<BLANKLINE>
+line5
+>>> text_indentation('what?')
+what?
+<BLANKLINE>
+>>> text_indentation('how dare I?        ... how dare you.')
+how dare I?
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+how dare you.
+<BLANKLINE>
