@@ -19,8 +19,8 @@ def text_indentation(text):
     last = 0
     for i, c in enumerate(text):
         if c in '.:?':
-            paras.append(text[last:i+1].strip())
+            paras.append(text[last:i+1].strip(' '))
             last = i + 1
     if last <= len(text):
-        paras.append(text[last:].strip())
+        paras.append(text[last:].strip(' '))
     print('\n\n'.join(paras), end='')
