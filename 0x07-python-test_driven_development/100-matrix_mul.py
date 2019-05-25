@@ -3,6 +3,17 @@
 
 
 def matrix_mul(m_a, m_b):
+    """Multiply 2 matrices
+
+    Args:
+        m_a (list of list of (int or float)): first matrix
+        m_b (list of list of (int or float)): second matrix
+
+    Returns:
+        list of list of (int or float): dot product of matrices
+
+    """
+
     isita = isinstance
     if not isita(m_a, list):
         raise TypeError('m_a must be a list')
