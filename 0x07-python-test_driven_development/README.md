@@ -21,5 +21,8 @@ Writing a unit test for a function that finds the largest value in a list.
 ## Matrix Multiplication
 Multiplying two matrices without imports.
 
+## Lazy Matrix Multiplication
+Multiplying two matrices using the NumPy package.
+
 ## CPython #3: Python Strings
-Printing information about Python string objects from C code.
+Printing information about Python string objects from C code.G
