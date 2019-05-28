@@ -14,3 +14,6 @@ Adding a method to display the rectangle as a string.
 
 ## Eval Is Magic
 Using the `__repr__` method to make a representation that is understood by `eval`.
+
+## Detect Instance Deletion
+Printing a message when a rectangle is deleted.
