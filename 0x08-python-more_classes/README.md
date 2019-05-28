@@ -20,3 +20,6 @@ Printing a message when a rectangle is deleted.
 
 ## How Many Instances
 Tracking the number of existing rectangle instances.
+
+## Change Representation
+Allowing changing the character used to print the rectangle.
