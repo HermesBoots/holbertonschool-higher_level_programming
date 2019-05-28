@@ -11,3 +11,6 @@ Adding methods to get area and perimeter of rectangle.
 
 ## String Representation
 Adding a method to display the rectangle as a string.
+
+## Eval Is Magic
+Using the `__repr__` method to make a representation that is understood by `eval`.
