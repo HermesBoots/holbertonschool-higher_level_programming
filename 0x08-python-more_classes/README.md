@@ -17,3 +17,6 @@ Using the `__repr__` method to make a representation that is understood by `eval
 
 ## Detect Instance Deletion
 Printing a message when a rectangle is deleted.
+
+## How Many Instances
+Tracking the number of existing rectangle instances.
