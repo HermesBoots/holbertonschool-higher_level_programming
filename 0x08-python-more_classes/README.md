@@ -5,3 +5,6 @@ Making an empty rectangle class.
 
 ## Real Definition of a Rectangle
 Adding height and width properties to the rectangle class.
+
+## Area and Perimeter
+Adding methods to get area and perimeter of rectangle.
