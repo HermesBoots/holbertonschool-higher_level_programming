@@ -29,3 +29,6 @@ Adding a method to compare areas of rectangles.
 
 ## A Square Is a Rectangle
 Making a class method that creates square rectangle objects.
+
+## N Queens
+Placing queens on a chess board in configurations where none of them threaten each other.
