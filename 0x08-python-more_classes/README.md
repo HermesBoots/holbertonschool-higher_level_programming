@@ -23,3 +23,6 @@ Tracking the number of existing rectangle instances.
 
 ## Change Representation
 Allowing changing the character used to print the rectangle.
+
+## Compare Rectangles
+Adding a method to compare areas of rectangles.
