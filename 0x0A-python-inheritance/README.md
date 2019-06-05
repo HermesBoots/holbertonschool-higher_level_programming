@@ -29,3 +29,6 @@ Creating a shape class to inherit from geometry class.
 
 ## Full Rectangle
 Implementing `__str__` and `area` methods on rectangle class.
+
+## Square #1
+Making a square sub class of rectangle.
