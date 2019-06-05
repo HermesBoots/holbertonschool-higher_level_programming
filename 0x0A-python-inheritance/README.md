@@ -20,3 +20,6 @@ Making an empty class.
 
 ## Improve Geometry
 Add unimplemented method to empty class.
+
+## Integer Validator
+Add integer validation method to geometry class.
