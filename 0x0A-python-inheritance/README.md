@@ -7,4 +7,7 @@ Returning attributes accessible in an object.
 Subclassing `list` to add a method.
 
 ## Exact Same Object
-Determining if instances is of a class but not its ancestors.
+Determining if instance is of a class but not its descendants.
+
+## Same Class or Inherit From
+Deteriming if instane is of a class or its descendants.
