@@ -23,3 +23,6 @@ Add unimplemented method to empty class.
 
 ## Integer Validator
 Add integer validation method to geometry class.
+
+## Rectangle
+Creating a shape class to inherit from geometry class.
