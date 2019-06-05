@@ -14,3 +14,6 @@ Deteriming if instance is of a class or its descendants.
 
 ## Only Sub Class Of
 Determining if instance is of a class's descendant but not itself.
+
+## Geometry Module
+Making an empty class.
