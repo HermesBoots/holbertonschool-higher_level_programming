@@ -26,3 +26,6 @@ Add integer validation method to geometry class.
 
 ## Rectangle
 Creating a shape class to inherit from geometry class.
+
+## Full Rectangle
+Implementing `__str__` and `area` methods on rectangle class.
