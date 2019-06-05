@@ -32,3 +32,6 @@ Implementing `__str__` and `area` methods on rectangle class.
 
 ## Square #1
 Making a square sub class of rectangle.
+
+## Square #2
+Implementing `__str__` method on square class.
