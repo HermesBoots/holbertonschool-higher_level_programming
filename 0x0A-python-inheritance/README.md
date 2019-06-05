@@ -17,3 +17,6 @@ Determining if instance is of a class's descendant but not itself.
 
 ## Geometry Module
 Making an empty class.
+
+## Improve Geometry
+Add unimplemented method to empty class.
