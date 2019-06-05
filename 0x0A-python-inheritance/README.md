@@ -35,3 +35,6 @@ Making a square sub class of rectangle.
 
 ## Square #2
 Implementing `__str__` method on square class.
+
+## My Integer
+Inverting the `==` and `!=` operator results with an `int` subclass.
