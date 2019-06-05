@@ -2,3 +2,6 @@
 
 ## Lookup
 Returning attributes accessible in an object.
+
+## My List
+Subclassing `list` to add a method.
