@@ -10,4 +10,7 @@ Subclassing `list` to add a method.
 Determining if instance is of a class but not its descendants.
 
 ## Same Class or Inherit From
-Deteriming if instane is of a class or its descendants.
+Deteriming if instance is of a class or its descendants.
+
+## Only Sub Class Of
+Determining if instance is of a class's descendant but not itself.
