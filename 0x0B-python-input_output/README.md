@@ -42,6 +42,9 @@ Preparing only attributes with given names for serialization.
 ## Student to Disk and Reload
 Loading attributes of a Student based on deserialized dictionary.
 
+## Search and Update
+Inserting new lines in a file when certain patterns are found.
+
 ## Log Parsing
 Parsing server logs as they are sent and printing statistics based on them.
 
