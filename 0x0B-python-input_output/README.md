@@ -29,3 +29,6 @@ Loading objects from persistent storage in JSON format.
 
 ## Load, Add, Save
 Saving command-line strings to a JSON file.
+
+## Class to JSON
+Getting a dictionary of JSON-serializable attributes in an object.
