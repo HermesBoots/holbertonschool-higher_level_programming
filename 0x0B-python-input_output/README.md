@@ -38,3 +38,6 @@ Starting a serializable "Student" class.
 
 ## Student to JSON with Filter
 Preparing only attributes with given names for serialization.
+
+## Student to Disk and Reload
+Load attributes of a Student based on deserialized dictionary.
