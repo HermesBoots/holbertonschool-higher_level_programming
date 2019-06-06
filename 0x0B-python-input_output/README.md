@@ -11,3 +11,9 @@ Printing only some lines from a file.
 
 ## Write to a File
 Writing a string to a file.
+
+## Append to a File
+Appending a string to a file.
+
+## To JSON String
+Serializing an object to JSON.
