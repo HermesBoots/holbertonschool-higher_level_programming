@@ -8,3 +8,6 @@ Counting the number of lines in a file.
 
 ## Read n Lines
 Printing only some lines from a file.
+
+## Write to a File
+Writing a string to a file.
