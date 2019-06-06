@@ -35,3 +35,6 @@ Getting a dictionary of JSON-serializable attributes in an object.
 
 ## Student to JSON
 Starting a serializable "Student" class.
+
+## Student to JSON with Filter
+Preparing only attributes with given names for serialization.
