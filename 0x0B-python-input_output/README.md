@@ -42,5 +42,8 @@ Preparing only attributes with given names for serialization.
 ## Student to Disk and Reload
 Loading attributes of a Student based on deserialized dictionary.
 
+## Log Parsing
+Parsing server logs as they are sent and printing statistics based on them.
+
 ## Hack the VM
 Changing values in the virtual memory of other processes.
