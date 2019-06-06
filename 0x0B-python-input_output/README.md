@@ -42,6 +42,9 @@ Preparing only attributes with given names for serialization.
 ## Student to Disk and Reload
 Loading attributes of a Student based on deserialized dictionary.
 
+## Pascal's Triangle
+Generating Pascal's triangle with a given height.
+
 ## Search and Update
 Inserting new lines in a file when certain patterns are found.
 
