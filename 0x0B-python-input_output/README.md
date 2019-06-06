@@ -23,3 +23,6 @@ Deserializing a JSON string.
 
 ## Save Object to a File
 Saving a JSON representation to a file.
+
+## Create Object from a JSON File
+Loading objects from persistent storage in JSON format.
