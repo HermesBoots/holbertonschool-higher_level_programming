@@ -27,3 +27,9 @@ TypeError: name must be an integer
 >>> b.integer_validator('', -1)
 Traceback (most recent call last):
 ValueError:  must be greater than 0
+>>> b.integer_validator('name', 0)
+Traceback (most recent call last):
+ValueError:  must be greater than 0
+>>> b.integer_validator('name', True)
+Traceback (most recent call last):
+TypeError: name must be an integer
