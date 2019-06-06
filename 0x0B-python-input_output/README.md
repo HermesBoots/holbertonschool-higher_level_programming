@@ -32,3 +32,6 @@ Saving command-line strings to a JSON file.
 
 ## Class to JSON
 Getting a dictionary of JSON-serializable attributes in an object.
+
+## Student to JSON
+Starting a serializable "Student" class.
