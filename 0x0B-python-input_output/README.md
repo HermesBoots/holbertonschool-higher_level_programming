@@ -17,3 +17,6 @@ Appending a string to a file.
 
 ## To JSON String
 Serializing an object to JSON.
+
+## From JSON String to Object
+Deserializing a JSON string.
