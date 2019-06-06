@@ -40,4 +40,7 @@ Starting a serializable "Student" class.
 Preparing only attributes with given names for serialization.
 
 ## Student to Disk and Reload
-Load attributes of a Student based on deserialized dictionary.
+Loading attributes of a Student based on deserialized dictionary.
+
+## Hack the VM
+Changing values in the virtual memory of other processes.
