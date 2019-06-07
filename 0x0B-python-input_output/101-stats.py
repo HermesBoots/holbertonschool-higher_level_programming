@@ -2,28 +2,21 @@
 """Monitor a running server log and track statistics about it"""
 
 
-import signal
+import re
 import sys
 
 
+logLine = re.compile(r"""
+    ((\d{1,3}\.){3}\d{1,3})? # IP address
+    (\s+-\s+\[[^\]]*\])? # date
+    (\s+"[^"]*")? # request URL
+    (\s+(\S+))?(\s+(\S+))? # status and size""", re.VERBOSE)
 outBuf = []
 status = {
     '200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0,
     '500': 0
 }
 total = 0
-
-
-def signalHandler(sigNum, frame):
-    """Handle the signal sent by Ctrl+C
-
-    Args:
-        sigNum (int): alway signal.SIGINT
-        frame: ignored
-
-    """
-
-    createRecord()
 
 
 def printStats():
@@ -45,16 +38,25 @@ def createRecord():
 
 
 if __name__ == '__main__':
-    signal.signal(signal.SIGINT, signalHandler)
     count = 0
-    for line in sys.stdin:
-        line, _, size = line.rpartition(' ')
-        line, _, code = line.rpartition(' ')
-        total += int(size)
-        if code in status:
-            status[code] += 1
-        count += 1
-        if count == 10:
-            count = 0
-            createRecord()
-            printStats()
+    try:
+        for line in sys.stdin:
+            match = logLine.match(line)
+            if match is None:
+                continue
+            code = match.groups()[5]
+            size = match.groups()[7]
+            if code is not None and code.isnumeric() and code in status:
+                status[code] += 1
+            if size is not None and size.isnumeric():
+                total += int(size)
+            count += 1
+            if count == 10:
+                count = 0
+                createRecord()
+                printStats()
+    except KeyboardInterrupt as error:
+        createRecord()
+        raise
+    finally:
+        printStats()
