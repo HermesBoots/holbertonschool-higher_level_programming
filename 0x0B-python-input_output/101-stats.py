@@ -7,10 +7,11 @@ import sys
 
 
 logLine = re.compile(r"""
-    ((\d{1,3}\.){3}\d{1,3})? # IP address
-    (\s+-\s+\[[^\]]*\])? # date
-    (\s+"[^"]*")? # request URL
-    (\s+(\S+))?(\s+(\S+))? # status and size""", re.VERBOSE)
+    ((\d{1,3}\.){3}\d{1,3}\s+)? # IP address
+    (-\s+) # the weird line
+    (\[[^\]]*\]\s+)? # date
+    ("[^"]*"\s+)? # request URL
+    (\S+)?\s*(\S+)? # status and size""", re.VERBOSE)
 outBuf = []
 status = {
     '200': 0, '301': 0, '400': 0, '401': 0, '403': 0, '404': 0, '405': 0,
@@ -45,7 +46,7 @@ if __name__ == '__main__':
             if match is None:
                 continue
             code = match.groups()[5]
-            size = match.groups()[7]
+            size = match.groups()[6]
             if code is not None and code.isnumeric() and code in status:
                 status[code] += 1
             if size is not None and size.isnumeric():
@@ -55,8 +56,11 @@ if __name__ == '__main__':
                 count = 0
                 createRecord()
                 printStats()
-    except KeyboardInterrupt as error:
+    except KeyboardInterrupt:
         createRecord()
-        raise
+        count = 0
+        printStats()
     finally:
+        if count != 0:
+            createRecord()
         printStats()
