@@ -51,4 +51,4 @@ if __name__ == '__main__':
             sys.exit(0)
         print('Target string found at {:#x}'.format(start + address))
         memory.seek(start + address)
-        memory.write(replace.encode('ASCII'))
+        memory.write(replace.encode('ASCII') + b'\0')
