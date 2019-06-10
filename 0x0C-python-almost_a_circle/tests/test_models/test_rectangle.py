@@ -2,7 +2,9 @@
 """Tests for rectangle data model"""
 
 
+import contextlib
 import importlib
+import io
 import models.rectangle
 import unittest
 
@@ -68,6 +70,26 @@ class RectangleTests (unittest.TestCase):
                 with self.subTest(name=name, msg='r.name = 0'):
                     with self.assertRaises(ValueError, msg=message):
                         setattr(r, name, 0)
+
+    def test_Display(self):
+        """Capturing the displayed rectangle"""
+
+        out = io.StringIO()
+        r = Rectangle(4, 6)
+        result = '####\n####\n####\n####\n####\n####\n'
+        with self.subTest():
+            with contextlib.redirect_stdout(out):
+                r.display()
+            self.assertEqual(out.getvalue(), result)
+        out.truncate(0)
+        out.seek(0)
+        r.width = 2
+        r.height = 3
+        result = '##\n##\n##\n'
+        with self.subTest():
+            with contextlib.redirect_stdout(out):
+                r.display()
+            self.assertEqual(out.getvalue(), result)
 
     def test_InitTooFewArgs(self):
         """Giving the constructor too few arguments"""

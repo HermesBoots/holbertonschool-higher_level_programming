@@ -30,6 +30,12 @@ class Rectangle (Base):
 
         return self.__width * self.__height
 
+    def display(self):
+        """Print rectangle using hash marks"""
+
+        for _ in range(self.__height):
+            print('#' * self.__width)
+
     @property
     def height(self):
         """Get height

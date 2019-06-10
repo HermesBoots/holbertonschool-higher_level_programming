@@ -14,3 +14,6 @@ Adding setters to the rectangle to validate attribute assignment.
 
 ## Area First
 Adding an area method to rectangles.
+
+## Display #0
+Display rectangle as a rectangle to the terminal.
