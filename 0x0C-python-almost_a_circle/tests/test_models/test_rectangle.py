@@ -5,6 +5,7 @@
 import contextlib
 import importlib
 import io
+import models.base
 import models.rectangle
 import unittest
 
@@ -18,6 +19,7 @@ class RectangleTests (unittest.TestCase):
     def setUp(self):
         """Refresh rectangle module before each test"""
 
+        importlib.reload(models.base)
         importlib.reload(models.rectangle)
 
     def test_Area(self):
@@ -105,3 +107,25 @@ class RectangleTests (unittest.TestCase):
                   'were given'
         with self.assertRaises(TypeError, msg=message):
             Rectangle(1, 2, 3, 4, 5, 6)
+
+    def test_ToString(self):
+        """Converting rectangles to a string"""
+
+        r = Rectangle(1, 2, 3, 4)
+        result = '[Rectangle] (1) 3/4 - 1/2'
+        with self.subTest():
+            self.assertEqual(str(r), result)
+        r.x = 10
+        r.y = 20
+        result = '[Rectangle] (1) 10/20 - 1/2'
+        with self.subTest():
+            self.assertEqual(str(r), result)
+        r = Rectangle(5, 6, 7, 8, 9)
+        result = '[Rectangle] (9) 7/8 - 5/6'
+        with self.subTest():
+            self.assertEqual(str(r), result)
+        r.width = 30
+        r.height = 40
+        result = '[Rectangle] (9) 7/8 - 30/40'
+        with self.subTest():
+            self.assertEqual(str(r), result)

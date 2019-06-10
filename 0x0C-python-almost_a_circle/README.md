@@ -17,3 +17,6 @@ Adding an area method to rectangles.
 
 ## Display #0
 Display rectangle as a rectangle to the terminal.
+
+## `__str__`
+Get serialization-appropriate representation of rectangles.

@@ -25,6 +25,17 @@ class Rectangle (Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        """Return serializer-appropriate representation of this object"""
+
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(
+            self.id,
+            self.x,
+            self.y,
+            self.width,
+            self.height
+        )
+
     def area(self):
         """Return the area of the rectangle"""
 
