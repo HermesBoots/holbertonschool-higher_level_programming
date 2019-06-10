@@ -41,12 +41,14 @@ if __name__ == '__main__':
     offset = int(offset, 16)
     start = int(start, 16) + offset
     end = int(end, 16)
+    print('Heap ranges from {:#x}-{:#x}'.format(start, end))
     with open('mem', 'r+b', buffering=0) as memory:
         memory.seek(start)
         heap = memory.read(end - start)
         address = heap.find(search.encode('ASCII'))
         if address < 0:
             print("Process isn't using that string")
-            sys.exit(1)
+            sys.exit(0)
+        print('Target string found at {:#x}'.format(start + address))
         memory.seek(start + address)
-        memory.write(replace.encode('ASCII'))
+        memory.write(replace.encode('ASCII') + b'\0')
