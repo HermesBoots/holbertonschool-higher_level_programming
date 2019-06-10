@@ -1,0 +1,98 @@
+#!/usr/bin/python3
+"""Rectangle data model"""
+
+
+from models.base import Base
+
+
+class Rectangle (Base):
+    """A rectangle with position and size attributes"""
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """Create a new complete rectangle
+
+        Args:
+            width (int): width
+            height (int): height
+            x (int): x coordinate
+            y (int): y coordinate
+            id: object ID
+
+        """
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
+    @property
+    def height(self):
+        """Get height
+
+        The setter validates the height to be a positive integer
+
+        """
+
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError('height must be an integer')
+        if value <= 0:
+            raise ValueError('value must be > 0')
+        self.__height = value
+
+    @property
+    def width(self):
+        """Get width
+
+        The setter validates the width to be a positive integer
+
+        """
+
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError('width must be an integer')
+        if value <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = value
+
+    @property
+    def x(self):
+        """Get x position
+
+        The setter validates this to be an integer and >= 0
+
+        """
+
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        if not isinstance(value, int):
+            raise TypeError('x must be an integer')
+        if value < 0:
+            raise ValueError('x must be >= 0')
+        self.__x = value
+
+    @property
+    def y(self):
+        """Get y position
+
+        The setter validates this to be an integer and >= 0
+
+        """
+
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        if not isinstance(value, int):
+            raise TypeError('y must be an integer')
+        if value < 0:
+            raise ValueError('y must be >= 0')
+        self.__y = value
