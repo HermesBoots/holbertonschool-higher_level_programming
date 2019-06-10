@@ -3,6 +3,8 @@
 
 
 import importlib
+import models.base
+import models.rectangle
 import models.square
 import unittest
 
@@ -16,7 +18,41 @@ class SquareTests (unittest.TestCase):
     def setUp(self):
         """Refresh the square module before each test"""
 
+        importlib.reload(models.base)
+        importlib.reload(models.rectangle)
         importlib.reload(models.square)
+
+
+    def test_AttributeValidation(self):
+        """Pass various values to attributes that validate input"""
+
+        s = Square(1000, 2000000, 1)
+        message = 'width must be an integer'
+        with self.subTest():
+            with self.assertRaises(TypeError, msg=message):
+                Square('3')
+        with self.subTest():
+            with self.assertRaises(TypeError, msg=message):
+                s.size = '3'
+        with self.subTest():
+            with self.assertRaises(TypeError, msg=message):
+                Square([3])
+        with self.subTest():
+            with self.assertRaises(TypeError, msg=message):
+                s.size = [3]
+        message = 'width must be > 0'
+        with self.subTest():
+            with self.assertRaises(ValueError, msg=message):
+                Square(0)
+        with self.subTest():
+            with self.assertRaises(ValueError, msg=message):
+                s.size = 0
+        with self.subTest():
+            with self.assertRaises(ValueError, msg=message):
+                Square(-1)
+        with self.subTest():
+            with self.assertRaises(ValueError, msg=message):
+                s.size = -1
 
     def test_InitTooFewArgs(self):
         """Giving too few arguments to the constructor"""
@@ -36,38 +72,40 @@ class SquareTests (unittest.TestCase):
         with self.assertRaises(TypeError, msg=message):
             Square(1, 2, 3, 4, 5)
 
-    def test_InvalidSize(self):
-        """Giving unacceptable values for the square's size"""
-
-        message = "width must be an integer"
-        with self.assertRaises(TypeError, msg=message):
-            Square('2')
-        with self.assertRaises(TypeError, msg=message):
-            Square([2])
-        s = Square(3)
-        with self.assertRaises(TypeError, msg=message):
-            s.size = '2'
-        with self.assertRaises(TypeError, msg=message):
-            s.size = [2]
-        message = "width must be > 0"
-        with self.assertRaises(ValueError, msg=message):
-            Square(-1000)
-        with self.assertRaises(ValueError, msg=message):
-            Square(0)
-        with self.assertRaises(ValueError, msg=message):
-            s.size = -1000
-        with self.assertRaises(ValueError, msg=message):
-            s.size = 0
-
     def test_SizeUpdatesWidthAndHeight(self):
         """Changing the size and seeing if it changes with and height"""
 
         s = Square(3)
-        self.assertEqual(s.width, 3)
-        self.assertEqual(s.height, 3)
+        with self.subTest():
+            self.assertEqual(s.width, 3)
+        with self.subTest():
+            self.assertEqual(s.height, 3)
         s.size = 100
-        self.assertEqual(s.width, 100)
-        self.assertEqual(s.height, 100)
+        with self.subTest():
+            self.assertEqual(s.width, 100)
+        with self.subTest():
+            self.assertEqual(s.height, 100)
+
+    def test_ToString(self):
+        """Converting squares to a string"""
+
+        s = Square(1, 2, 3)
+        result = '[Square] (1) 2/3 - 1/1'
+        with self.subTest():
+            self.assertEqual(str(s), result)
+        s.x = 10
+        s.y = 20
+        result = '[Square] (1) 10/20 - 1/1'
+        with self.subTest():
+            self.assertEqual(str(s), result)
+        s = Square(5, 6, 7, 8)
+        result = '[Square] (8) 6/7 - 5/5'
+        with self.subTest():
+            self.assertEqual(str(s), result)
+        s.size = 30
+        result = '[Square] (8) 6/7 - 30/30'
+        with self.subTest():
+            self.assertEqual(str(s), result)
 
     def test_ToDictionary(self):
         """Converting the object to a dictionary"""
@@ -76,29 +114,31 @@ class SquareTests (unittest.TestCase):
         d = {'id': 'square', 'size': 3, 'x': 10, 'y': 4}
         self.assertEqual(s.to_dictionary(), d)
 
-    def test_UpdateAttributes(self):
-        """Using the update method to change some of the object's attributes"""
+    def test_Update(self):
+        """Updating attributes using the update method"""
 
-        s = Square(3, 10, 4, 'square')
-        s.update('changed')
-        self.assertEqual(s.id, 'changed')
-        s.update('back', 5)
-        self.assertEqual(s.id, 'back')
-        self.assertEqual(s.size, 5)
-        s.update('another', 20, size=30)
-        self.assertEqual(s.size, 20)
-        s.update('id', 1, 2, 3)
-        self.assertEqual(s.x, 2)
-        self.assertEqual(s.y, 3)
-        s.update(y=50)
-        self.assertEqual(s.y, 50)
-        s.update(id='id2', size=15, x=0, y=1)
-        self.assertEqual(s.id, 'id2')
-        self.assertEqual(s.size, 15)
-        self.assertEqual(s.x, 0)
-        self.assertEqual(s.y, 1)
-        s.update(size=2, y=0, x=10, id=50)
-        self.assertEqual(s.id, 50)
-        self.assertEqual(s.size, 2)
-        self.assertEqual(s.x, 10)
-        self.assertEqual(s.y, 0)
+        s = Square(1, 2, 3)
+        arguments = (
+            ('id', 'id'), ('size', 20), ('x', 30), ('y', 40), ('extra', 0)
+        )
+        d = s.to_dictionary()
+        for i in range(len(arguments)):
+            args = arguments[:i + 1]
+            if i < len(arguments) - 1:
+                d.update(args)
+            with self.subTest():
+                s.update(*(val for _, val in args))
+                self.assertEqual(s.to_dictionary(), d)
+        s.update('new', width=5)
+        d['id'] = 'new'
+        with self.subTest():
+            self.assertEqual(s.to_dictionary(), d)
+        s.update('new', 1, 2, 3, 4)
+        d = s.to_dictionary()
+        for i in range(len(arguments)):
+            args = arguments[:i + 1]
+            if i < len(arguments) - 1:
+                d.update(args)
+            with self.subTest():
+                s.update(**dict(args))
+                self.assertEqual(s.to_dictionary(), d)
