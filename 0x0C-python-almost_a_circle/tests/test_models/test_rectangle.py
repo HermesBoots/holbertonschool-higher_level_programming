@@ -18,6 +18,17 @@ class RectangleTests (unittest.TestCase):
 
         importlib.reload(models.rectangle)
 
+    def test_Area(self):
+        """Compare width and height to result of area method"""
+
+        r = Rectangle(200, 500)
+        with self.subTest():
+            self.assertEqual(r.area(), 100000)
+        r.width = 5
+        r.height = 1000
+        with self.subTest():
+            self.assertEqual(r.area(), 5000)
+
     def test_AttributeValidation(self):
         """Pass various values to attributes that validate input"""
 

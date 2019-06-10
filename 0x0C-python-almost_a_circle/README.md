@@ -11,3 +11,6 @@ Adding a rectangle data model with a constructor to set some private attributes.
 
 ## Validate Attributes
 Adding setters to the rectangle to validate attribute assignment.
+
+## Area First
+Adding an area method to rectangles.
