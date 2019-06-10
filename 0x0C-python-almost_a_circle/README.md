@@ -30,5 +30,17 @@ Update attributes of rectangles from positional arguments in a method.
 ## Update #1
 Update attributes of rectangles from keyword arguments in a method.
 
+## And Now, the Square!
+Adding Square subclass of Rectangle that's printable.
+
+## Square Size
+Adding a size attribute to squares that use the width and height attributes from the parent.
+
+## Square Update
+Update squares from positional and keyword arguments.
+
 ## Rectangle Instance to Dictionary Representation
 Get a dictionary containing a rectangle's public attributes.
+
+## Square Instance to Dictionary Representation
+Get a dictionary containing a square's public attributes.
