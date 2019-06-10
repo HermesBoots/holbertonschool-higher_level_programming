@@ -20,3 +20,6 @@ Display rectangle as a rectangle to the terminal.
 
 ## `__str__`
 Get serialization-appropriate representation of rectangles.
+
+## Display #1
+Add position support when displaying rectangles.

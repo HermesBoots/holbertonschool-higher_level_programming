@@ -87,7 +87,9 @@ class RectangleTests (unittest.TestCase):
         out.seek(0)
         r.width = 2
         r.height = 3
-        result = '##\n##\n##\n'
+        r.x = 3
+        r.y = 2
+        result = '\n\n   ##\n   ##\n   ##\n'
         with self.subTest():
             with contextlib.redirect_stdout(out):
                 r.display()
