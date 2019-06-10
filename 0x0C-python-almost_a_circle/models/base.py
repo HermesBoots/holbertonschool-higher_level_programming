@@ -3,6 +3,7 @@
 
 
 import json
+import os.path
 
 
 class Base:
@@ -24,6 +25,17 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Save a JSON string version of list_objs for the given class"""
+
+        if list_objs is None:
+            list_objs = []
+        list_objs = [b.to_dictionary() for b in list_objs]
+        list_objs = cls.to_json_string(list_objs)
+        with open(cls.__name__ + '.json', 'wt') as file:
+            file.write(list_objs)
 
     @staticmethod
     def to_json_string(list_dictionaries):

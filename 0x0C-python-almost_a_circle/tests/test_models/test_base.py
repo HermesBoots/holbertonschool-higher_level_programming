@@ -5,10 +5,15 @@
 import importlib
 import json
 import models.base
+import models.rectangle
+import models.square
+import os
 import unittest
 
 
 Base = models.base.Base
+Rectangle = models.rectangle.Rectangle
+Square = models.square.Square
 
 
 class BaseTests (unittest.TestCase):
@@ -18,6 +23,8 @@ class BaseTests (unittest.TestCase):
         """Reset module being tested between tests"""
 
         importlib.reload(models.base)
+        importlib.reload(models.rectangle)
+        importlib.reload(models.square)
 
     def test_InitTooManyArgs(self):
         "Passing too many constructor arguments"""
@@ -52,6 +59,40 @@ class BaseTests (unittest.TestCase):
         self.assertEqual(obj.id, [1, 2, 3])
         obj = Base(None)
         self.assertEqual(obj.id, 1)
+
+    def test_Save(self):
+        """Saving JSON to a file"""
+
+        try:
+            os.remove('Rectangle.json')
+        except FileNotFoundError:
+            pass
+        try:
+            os.remove('Square.json')
+        except FileNotFoundError:
+            pass
+        r1 = Rectangle(1, 2, 3, 4)
+        r2 = Rectangle(5, 6, 7, 8)
+        j = json.dumps([r1.to_dictionary(), r2.to_dictionary()])
+        with self.subTest():
+            Rectangle.save_to_file([r1, r2])
+            with open('Rectangle.json', 'rt') as file:
+                self.assertEqual(file.read(), j)
+        with self.subTest():
+            Rectangle.save_to_file(None)
+            with open('Rectangle.json', 'rt') as file:
+                self.assertEqual(file.read(), '[]')
+        s1 = Square(10, 20, 30)
+        s2 = Square(100, 200, 300)
+        j = json.dumps([s1.to_dictionary(), s2.to_dictionary()])
+        with self.subTest():
+            Square.save_to_file([])
+            with open('Square.json', 'rt') as file:
+                self.assertEqual(file.read(), '[]')
+        with self.subTest():
+            Square.save_to_file([s1, s2])
+            with open('Square.json', 'rt') as file:
+                self.assertEqual(file.read(), j)
 
     def test_ToJson(self):
         """Converting a list to a JSON representation"""
