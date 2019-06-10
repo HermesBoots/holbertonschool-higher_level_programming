@@ -2,6 +2,9 @@
 """Base class for all data models"""
 
 
+import json
+
+
 class Base:
     """Methods and ID tracking used by all persistent classes"""
 
@@ -21,3 +24,11 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Return JSON string conversion of list_dictionaries"""
+
+        if list_dictionaries is None or len(list_dictionaries) < 1:
+            return '[]'
+        return json.dumps(list_dictionaries)

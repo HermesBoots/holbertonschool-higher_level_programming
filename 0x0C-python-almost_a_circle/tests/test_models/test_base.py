@@ -2,8 +2,9 @@
 """Tests for data model base class"""
 
 
-import models.base
 import importlib
+import json
+import models.base
 import unittest
 
 
@@ -51,3 +52,17 @@ class BaseTests (unittest.TestCase):
         self.assertEqual(obj.id, [1, 2, 3])
         obj = Base(None)
         self.assertEqual(obj.id, 1)
+
+    def test_ToJson(self):
+        """Converting a list to a JSON representation"""
+
+        with self.subTest():
+            self.assertEqual(Base.to_json_string(None), '[]')
+        with self.subTest():
+            self.assertEqual(Base.to_json_string([]), '[]')
+        b = Base()
+        j = [{'a': 1, 'b': 2}, {1: 'a', 2: 'b'}]
+        with self.subTest():
+            self.assertEqual(b.to_json_string(j), json.dumps(j))
+        with self.subTest():
+            self.assertEqual(Base.to_json_string(j), json.dumps(j))
