@@ -23,3 +23,12 @@ Get serialization-appropriate representation of rectangles.
 
 ## Display #1
 Add position support when displaying rectangles.
+
+## Update #0
+Update attributes of rectangles from positional arguments in a method.
+
+## Update #1
+Update attributes of rectangles from keyword arguments in a method.
+
+## Rectangle Instance to Dictionary Representation
+Get a dictionary containing a rectangle's public attributes.

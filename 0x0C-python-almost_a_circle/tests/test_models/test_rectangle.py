@@ -110,6 +110,24 @@ class RectangleTests (unittest.TestCase):
         with self.assertRaises(TypeError, msg=message):
             Rectangle(1, 2, 3, 4, 5, 6)
 
+    def test_toDictionary(self):
+        """Converting rectangles to a dictionary"""
+
+        r = Rectangle(1, 2, 3, 4)
+        d = {'id': 1, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
+        with self.subTest():
+            self.assertEqual(r.to_dictionary(), d)
+        r.id = 'id'
+        r.width = 30
+        r.height = 20
+        r.x = 50
+        d['id'] = 'id'
+        d['width'] = 30
+        d['height'] = 20
+        d['x'] = 50
+        with self.subTest():
+            self.assertEqual(r.to_dictionary(), d)
+
     def test_ToString(self):
         """Converting rectangles to a string"""
 
@@ -131,3 +149,33 @@ class RectangleTests (unittest.TestCase):
         result = '[Rectangle] (9) 7/8 - 30/40'
         with self.subTest():
             self.assertEqual(str(r), result)
+
+    def test_Update(self):
+        """Updating attributes using the update method"""
+
+        r = Rectangle(1, 2, 3, 4)
+        arguments = (
+            ('id', 'id'), ('width', 10), ('height', 20), ('x', 30), ('y', 40),
+            ('extra', 0)
+        )
+        d = r.to_dictionary()
+        for i in range(len(arguments)):
+            args = arguments[:i + 1]
+            if i < len(arguments) - 1:
+                d.update(args)
+            with self.subTest():
+                r.update(*(val for _, val in args))
+                self.assertEqual(r.to_dictionary(), d)
+        r.update('new', width=5)
+        d['id'] = 'new'
+        with self.subTest():
+            self.assertEqual(r.to_dictionary(), d)
+        r.update('new', 1, 2, 3, 4)
+        d = r.to_dictionary()
+        for i in range(len(arguments)):
+            args = arguments[:i + 1]
+            if i < len(arguments) - 1:
+                d.update(args)
+            with self.subTest():
+                r.update(**dict(args))
+                self.assertEqual(r.to_dictionary(), d)

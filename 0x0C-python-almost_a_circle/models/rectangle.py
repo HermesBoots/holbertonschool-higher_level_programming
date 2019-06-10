@@ -67,6 +67,37 @@ class Rectangle (Base):
             raise ValueError('height must be > 0')
         self.__height = value
 
+    def to_dictionary(self):
+        """Return dictionary of this object's public attributes"""
+
+        return {
+            'id': self.id, 'width': self.width, 'height': self.height,
+            'x': self.x, 'y': self.y
+        }
+
+    def update(self, *args, **kwargs):
+        """Update this object's attributes
+
+        Args:
+            id
+            width
+            height
+            x
+            y
+
+        """
+
+        if len(args) > 0:
+            attrs = ('id', 'width', 'height', 'x', 'y')
+            for name, value in zip(attrs, args):
+                setattr(self, name, value)
+        else:
+            self.id = kwargs.get('id', self.id)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
+
     @property
     def width(self):
         """Get width
