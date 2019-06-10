@@ -24,11 +24,10 @@ class Square (Rectangle):
     def __str__(self):
         """Return a representation of this object's attributes"""
 
-        return '[Square] ({}) {}/{} - {}/{}'.format(
+        return '[Square] ({}) {}/{} - {}'.format(
             self.id,
             self.x,
             self.y,
-            self.size,
             self.size
         )
 

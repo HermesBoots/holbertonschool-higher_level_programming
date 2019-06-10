@@ -90,20 +90,20 @@ class SquareTests (unittest.TestCase):
         """Converting squares to a string"""
 
         s = Square(1, 2, 3)
-        result = '[Square] (1) 2/3 - 1/1'
+        result = '[Square] (1) 2/3 - 1'
         with self.subTest():
             self.assertEqual(str(s), result)
         s.x = 10
         s.y = 20
-        result = '[Square] (1) 10/20 - 1/1'
+        result = '[Square] (1) 10/20 - 1'
         with self.subTest():
             self.assertEqual(str(s), result)
         s = Square(5, 6, 7, 8)
-        result = '[Square] (8) 6/7 - 5/5'
+        result = '[Square] (8) 6/7 - 5'
         with self.subTest():
             self.assertEqual(str(s), result)
         s.size = 30
-        result = '[Square] (8) 6/7 - 30/30'
+        result = '[Square] (8) 6/7 - 30'
         with self.subTest():
             self.assertEqual(str(s), result)
 
