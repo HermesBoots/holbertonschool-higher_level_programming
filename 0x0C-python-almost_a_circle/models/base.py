@@ -27,6 +27,21 @@ class Base:
             self.id = id
 
     @classmethod
+    def create(cls, **dictionary):
+        """Return a new instance of a class from an attribute dictionary"""
+
+        obj = cls(0, 0)
+        obj.update(**dictionary)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Return a decoded JSON string"""
+
+        if json_string is None or len(json_string) < 1:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
     def save_to_file(cls, list_objs):
         """Save a JSON string version of list_objs for the given class"""
 
