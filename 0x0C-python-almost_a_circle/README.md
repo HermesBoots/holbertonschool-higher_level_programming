@@ -50,3 +50,6 @@ Create new instances with attributes from a keyword argument list.
 
 ## File to Instances
 Load instances from a JSON file.
+
+## JSON, but CSV?
+Load from CSV files in addition to JSON files.

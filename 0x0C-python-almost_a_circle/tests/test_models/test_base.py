@@ -64,6 +64,84 @@ class BaseTests (unittest.TestCase):
             d = {'size': 1, 'x': 3, 'y': 4, 'id': 'id'}
             self.assertEqual(o.to_dictionary(), d)
 
+    def test_Csv(self):
+        """Converting to CSV files and back"""
+
+        try:
+            os.remove('Rectangle.csv')
+        except FileNotFoundError:
+            pass
+        try:
+            os.remove('Square.csv')
+        except FileNotFoundError:
+            pass
+        r1 = Rectangle(1, 2, 3, 4)
+        r2 = Rectangle(5, 6, 7, 8)
+        with self.subTest():
+            Rectangle.save_to_file_csv([r1, r2])
+            with open('Rectangle.csv', 'rt') as file:
+                self.assertEqual(file.read(), '1,1,2,3,4\n2,5,6,7,8')
+        with self.subTest():
+            Rectangle.save_to_file_csv(None)
+            with open('Rectangle.csv', 'rt') as file:
+                self.assertEqual(file.read(), '')
+        s1 = Square(10, 20, 30)
+        s2 = Square(100, 200, 300)
+        with self.subTest():
+            Square.save_to_file_csv([s1, s2])
+            with open('Square.csv', 'rt') as file:
+                self.assertEqual(file.read(), '3,10,20,30\n4,100,200,300')
+        with self.subTest():
+            Square.save_to_file_csv([])
+            with open('Square.csv', 'rt') as file:
+                self.assertEqual(file.read(), '')
+        try:
+            os.remove('Rectangle.csv')
+        except FileNotFoundError:
+            pass
+        try:
+            os.remove('Square.csv')
+        except FileNotFoundError:
+            pass
+        with self.subTest():
+            self.assertEqual(Rectangle.load_from_file_csv(), [])
+        with self.subTest():
+            self.assertEqual(Square.load_from_file_csv(), [])
+        with open('Rectangle.csv', 'wt'):
+            pass
+        with open('Square.csv', 'wt'):
+            pass
+        with self.subTest():
+            self.assertEqual(Rectangle.load_from_file_csv(), [])
+        with self.subTest():
+            self.assertEqual(Square.load_from_file_csv(), [])
+        with open('Rectangle.csv', 'wt') as file:
+            file.write('id,1,2,3,4')
+        with open('Square.csv', 'wt') as file:
+            file.write('id,1,2,3')
+        with self.subTest():
+            r = Rectangle(1, 2, 3, 4, 'id')
+            o = Rectangle.load_from_file_csv()[0]
+            self.assertEqual(r.to_dictionary(), o.to_dictionary())
+        with self.subTest():
+            s = Square(1, 2, 3, 'id')
+            o = Square.load_from_file_csv()[0]
+            self.assertEqual(s.to_dictionary(), o.to_dictionary())
+        with open('Rectangle.csv', 'at') as file:
+            file.write('\nye,5,6,7,8')
+        with open('Square.csv', 'at') as file:
+            file.write('\nother,4,5,6')
+        with self.subTest():
+            r = [Rectangle(1, 2, 3, 4, 'id'), Rectangle(5, 6, 7, 8, 'ye')]
+            o = Rectangle.load_from_file_csv()
+            for a, b in zip(r, o):
+                self.assertEqual(a.to_dictionary(), b.to_dictionary())
+        with self.subTest():
+            s = [Square(1, 2, 3, 'id'), Square(4, 5, 6, 'other')]
+            o = Square.load_from_file_csv()
+            for a, b in zip(s, o):
+                self.assertEqual(a.to_dictionary(), b.to_dictionary())
+
     def test_FromJson(self):
         """Turning JSON strings into objects"""
 

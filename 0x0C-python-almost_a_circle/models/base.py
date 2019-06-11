@@ -53,6 +53,40 @@ class Base:
         return [cls.create(**d) for d in objects]
 
     @classmethod
+    def load_from_file_csv(cls):
+        """Load a list of instances from a CSV table"""
+
+        if not os.path.exists(cls.__name__ + '.csv'):
+            return []
+        with open(cls.__name__ + '.csv', 'rt') as file:
+            objects = file.readlines()
+        if cls.__name__ == 'Rectangle':
+            attrs = ('id', 'width', 'height', 'x', 'y')
+        elif cls.__name__ == 'Square':
+            attrs = ('id', 'size', 'x', 'y')
+        objects = [[f.strip() for f in l.split(',')] for l in objects]
+        for l in objects:
+            for i, v in enumerate(l[1:], 1):
+                l[i] = int(v)
+        return [cls.create(**dict(zip(attrs, l))) for l in objects]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save a CSV version of the objects in list_objs for a class"""
+
+        if list_objs is None:
+            list_objs = []
+        if cls.__name__ == 'Rectangle':
+            attrs = ('id', 'width', 'height', 'x', 'y')
+            list_objs = ((getattr(o, a) for a in attrs) for o in list_objs)
+        elif cls.__name__ == 'Square':
+            attrs = ('id', 'size', 'x', 'y')
+            list_objs = ((getattr(o, a) for a in attrs) for o in list_objs)
+        list_objs = [','.join(str(a) for a in o) for o in list_objs]
+        with open(cls.__name__ + '.csv', 'wt') as file:
+            file.write('\n'.join(list_objs))
+
+    @classmethod
     def save_to_file(cls, list_objs):
         """Save a JSON string version of list_objs for the given class"""
 
