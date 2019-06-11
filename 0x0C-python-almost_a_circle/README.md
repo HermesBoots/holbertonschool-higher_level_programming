@@ -44,3 +44,6 @@ Get a dictionary containing a rectangle's public attributes.
 
 ## Square Instance to Dictionary Representation
 Get a dictionary containing a square's public attributes.
+
+## Dictionary to Instance
+Create new instances with attributes from a keyword argument list.

@@ -26,6 +26,44 @@ class BaseTests (unittest.TestCase):
         importlib.reload(models.rectangle)
         importlib.reload(models.square)
 
+    def test_Create(self):
+        """Creating new instances with the create class method"""
+
+        with self.subTest():
+            o = Rectangle.create()
+            self.assertIsInstance(o, Rectangle)
+            self.assertEqual(o.id, 1)
+        with self.subTest():
+            o = Square.create()
+            self.assertIsInstance(o, Square)
+            self.assertEqual(o.id, 2)
+        with self.subTest():
+            o = Rectangle.create(width=3, height=4)
+            self.assertEqual(o.width, 3)
+            self.assertEqual(o.height, 4)
+            self.assertEqual(o.id, 3)
+        with self.subTest():
+            o = Rectangle.create(width=4, height=5, extra='extra')
+            self.assertEqual(o.width, 4)
+            self.assertEqual(o.height, 5)
+            self.assertEqual(o.id, 4)
+        with self.subTest():
+            o = Square.create(size=3)
+            self.assertEqual(o.size, 3)
+            self.assertEqual(o.id, 5)
+        with self.subTest():
+            o = Square.create(size=4, extra='extra')
+            self.assertEqual(o.size, 4)
+            self.assertEqual(o.id, 6)
+        with self.subTest():
+            o = Rectangle.create(width=1, height=2, x=3, y=4, id='id')
+            d = {'width': 1, 'height': 2, 'x': 3, 'y': 4, 'id': 'id'}
+            self.assertEqual(o.to_dictionary(), d)
+        with self.subTest():
+            o = Square.create(size=1, x=3, y=4, id='id')
+            d = {'size': 1, 'x': 3, 'y': 4, 'id': 'id'}
+            self.assertEqual(o.to_dictionary(), d)
+
     def test_FromJson(self):
         """Turning JSON strings into objects"""
 
