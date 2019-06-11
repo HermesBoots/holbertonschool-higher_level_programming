@@ -26,6 +26,29 @@ class BaseTests (unittest.TestCase):
         importlib.reload(models.rectangle)
         importlib.reload(models.square)
 
+    def test_FromJson(self):
+        """Turning JSON strings into objects"""
+
+        j = None
+        with self.subTest():
+            self.assertEqual(Base.from_json_string(j), [])
+        j = ''
+        with self.subTest():
+            self.assertEqual(Base.from_json_string(j), [])
+        j = '[]'
+        with self.subTest():
+            self.assertEqual(Base.from_json_string(j), [])
+        j = '[{}]'
+        with self.subTest():
+            self.assertEqual(Base.from_json_string(j), [{}])
+        j = '[{"a": 1, "b": 2}]'
+        with self.subTest():
+            self.assertEqual(Base.from_json_string(j), [{'a': 1, 'b': 2}])
+        j = '[{"a": 1, "b": 2}, {"3": "c", "4": "d"}]'
+        o = [{'a': 1, 'b': 2}, {'3': 'c', '4': 'd'}]
+        with self.subTest():
+            self.assertEqual(Base.from_json_string(j), o)
+
     def test_InitTooManyArgs(self):
         "Passing too many constructor arguments"""
 
