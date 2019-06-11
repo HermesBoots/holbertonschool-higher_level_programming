@@ -43,6 +43,16 @@ class Base:
         return json.loads(json_string)
 
     @classmethod
+    def load_from_file(cls):
+        """Load a list of instances from a JSON file"""
+
+        if not os.path.exists(cls.__name__ + '.json'):
+            return []
+        with open(cls.__name__ + '.json', 'rt') as file:
+            objects = cls.from_json_string(file.read())
+        return [cls.create(**d) for d in objects]
+
+    @classmethod
     def save_to_file(cls, list_objs):
         """Save a JSON string version of list_objs for the given class"""
 

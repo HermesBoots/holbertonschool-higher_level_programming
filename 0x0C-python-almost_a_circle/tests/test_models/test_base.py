@@ -121,6 +121,62 @@ class BaseTests (unittest.TestCase):
         obj = Base(None)
         self.assertEqual(obj.id, 1)
 
+    def test_Load(self):
+        """Loading objects from a JSON file"""
+
+        try:
+            os.remove('Rectangle.json')
+        except FileNotFoundError:
+            pass
+        try:
+            os.remove('Square.json')
+        except FileNotFoundError:
+            pass
+        with self.subTest():
+            self.assertEqual(Rectangle.load_from_file(), [])
+        with self.subTest():
+            self.assertEqual(Square.load_from_file(), [])
+        with open('Rectangle.json', 'wt') as file:
+            pass
+        with open('Square.json', 'wt') as file:
+            pass
+        with self.subTest():
+            self.assertEqual(Rectangle.load_from_file(), [])
+        with self.subTest():
+            self.assertEqual(Square.load_from_file(), [])
+        with open('Rectangle.json', 'wt') as file:
+            file.write('[')
+            file.write('{"width": 1, "height": 2, "x": 3, "y": 4, "id": "id"}')
+            file.write(']')
+        with open('Square.json', 'wt') as file:
+            file.write('[{"size": 1, "x": 2, "y": 3, "id": "id"}]')
+        with self.subTest():
+            r = Rectangle(1, 2, 3, 4, 'id')
+            o = Rectangle.load_from_file()[0]
+            self.assertEqual(r.to_dictionary(), o.to_dictionary())
+        with self.subTest():
+            s = Square(1, 2, 3, 'id')
+            o = Square.load_from_file()[0]
+            self.assertEqual(s.to_dictionary(), o.to_dictionary())
+        with open('Rectangle.json', 'r+t') as file:
+            file.seek(54)
+            file.write(', ')
+            file.write('{"width": 5, "height": 6, "x": 7, "y": 8, "id": "ye"}')
+            file.write(']')
+        with open('Square.json', 'r+t') as file:
+            file.seek(40)
+            file.write(', {"size": 4, "x": 5, "y": 6, "id": "other"}]')
+        with self.subTest():
+            r = [Rectangle(1, 2, 3, 4, 'id'), Rectangle(5, 6, 7, 8, 'ye')]
+            o = Rectangle.load_from_file()
+            for a, b in zip(r, o):
+                self.assertEqual(a.to_dictionary(), b.to_dictionary())
+        with self.subTest():
+            s = [Square(1, 2, 3, 'id'), Square(4, 5, 6, 'other')]
+            o = Square.load_from_file()
+            for a, b in zip(s, o):
+                self.assertEqual(a.to_dictionary(), b.to_dictionary())
+
     def test_Save(self):
         """Saving JSON to a file"""
 

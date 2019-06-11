@@ -47,3 +47,6 @@ Get a dictionary containing a square's public attributes.
 
 ## Dictionary to Instance
 Create new instances with attributes from a keyword argument list.
+
+## File to Instances
+Load instances from a JSON file.
