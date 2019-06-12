@@ -92,6 +92,8 @@ class Base:
         list_objs = [','.join(str(a) for a in o) for o in list_objs]
         with open(cls.__name__ + '.csv', 'wt') as file:
             file.write('\n'.join(list_objs))
+            if len(list_objs) > 0:
+                file.write('\n')
 
     @classmethod
     def save_to_file(cls, list_objs):

@@ -92,7 +92,7 @@ class BaseTests (unittest.TestCase):
         with self.subTest():
             Rectangle.save_to_file_csv([r1, r2])
             with open('Rectangle.csv', 'rt') as file:
-                self.assertEqual(file.read(), '1,1,2,3,4\n2,5,6,7,8')
+                self.assertEqual(file.read(), '1,1,2,3,4\n2,5,6,7,8\n')
         with self.subTest():
             Rectangle.save_to_file_csv(None)
             with open('Rectangle.csv', 'rt') as file:
@@ -102,7 +102,7 @@ class BaseTests (unittest.TestCase):
         with self.subTest():
             Square.save_to_file_csv([s1, s2])
             with open('Square.csv', 'rt') as file:
-                self.assertEqual(file.read(), '3,10,20,30\n4,100,200,300')
+                self.assertEqual(file.read(), '3,10,20,30\n4,100,200,300\n')
         with self.subTest():
             Square.save_to_file_csv([])
             with open('Square.csv', 'rt') as file:
