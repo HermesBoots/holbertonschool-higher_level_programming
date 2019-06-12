@@ -17,7 +17,7 @@ class Base:
 
         Args:
             id: used for object ID if not None; else number of objects used
-        
+
         """
 
         if id is None:

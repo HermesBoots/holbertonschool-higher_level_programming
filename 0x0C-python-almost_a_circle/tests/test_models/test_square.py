@@ -22,7 +22,6 @@ class SquareTests (unittest.TestCase):
         importlib.reload(models.rectangle)
         importlib.reload(models.square)
 
-
     def test_AttributeValidation(self):
         """Pass various values to attributes that validate input"""
 
