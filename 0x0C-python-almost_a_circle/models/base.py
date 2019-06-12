@@ -2,6 +2,7 @@
 """Base class for all data models"""
 
 
+import csv
 import json
 import os.path
 
@@ -65,13 +66,13 @@ class Base:
 
         if not os.path.exists(cls.__name__ + '.csv'):
             return []
-        with open(cls.__name__ + '.csv', 'rt') as file:
-            objects = file.readlines()
+        with open(cls.__name__ + '.csv', 'rt', newline='') as file:
+            reader = csv.reader(file)
+            objects = list(reader)
         if cls.__name__ == 'Rectangle':
             attrs = ('id', 'width', 'height', 'x', 'y')
         elif cls.__name__ == 'Square':
             attrs = ('id', 'size', 'x', 'y')
-        objects = [[f.strip() for f in l.split(',')] for l in objects]
         for l in objects:
             for i, v in enumerate(l[1:], 1):
                 l[i] = int(v)
@@ -85,15 +86,13 @@ class Base:
             list_objs = []
         if cls.__name__ == 'Rectangle':
             attrs = ('id', 'width', 'height', 'x', 'y')
-            list_objs = ((getattr(o, a) for a in attrs) for o in list_objs)
         elif cls.__name__ == 'Square':
             attrs = ('id', 'size', 'x', 'y')
-            list_objs = ((getattr(o, a) for a in attrs) for o in list_objs)
-        list_objs = [','.join(str(a) for a in o) for o in list_objs]
-        with open(cls.__name__ + '.csv', 'wt') as file:
-            file.write('\n'.join(list_objs))
-            if len(list_objs) > 0:
-                file.write('\n')
+        list_objs = ([str(getattr(o, a)) for a in attrs] for o in list_objs)
+        with open(cls.__name__ + '.csv', 'wt', newline='') as file:
+            writer = csv.writer(file)
+            for row in list_objs:
+                writer.writerow(row)
 
     @classmethod
     def save_to_file(cls, list_objs):

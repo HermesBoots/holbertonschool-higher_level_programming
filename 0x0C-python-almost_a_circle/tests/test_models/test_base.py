@@ -128,11 +128,11 @@ class BaseTests (unittest.TestCase):
         with self.subTest():
             self.assertEqual(Square.load_from_file_csv(), [])
         with open('Rectangle.csv', 'wt') as file:
-            file.write('id,1,2,3,4')
+            file.write('"weird\nid,man",1,2,3,4')
         with open('Square.csv', 'wt') as file:
             file.write('id,1,2,3')
         with self.subTest():
-            r = Rectangle(1, 2, 3, 4, 'id')
+            r = Rectangle(1, 2, 3, 4, 'weird\nid,man')
             o = Rectangle.load_from_file_csv()[0]
             self.assertEqual(r.to_dictionary(), o.to_dictionary())
         with self.subTest():
@@ -144,7 +144,10 @@ class BaseTests (unittest.TestCase):
         with open('Square.csv', 'at') as file:
             file.write('\nother,4,5,6')
         with self.subTest():
-            r = [Rectangle(1, 2, 3, 4, 'id'), Rectangle(5, 6, 7, 8, 'ye')]
+            r = [
+                Rectangle(1, 2, 3, 4, 'weird\nid,man'),
+                Rectangle(5, 6, 7, 8, 'ye')
+            ]
             o = Rectangle.load_from_file_csv()
             for a, b in zip(r, o):
                 self.assertEqual(a.to_dictionary(), b.to_dictionary())
