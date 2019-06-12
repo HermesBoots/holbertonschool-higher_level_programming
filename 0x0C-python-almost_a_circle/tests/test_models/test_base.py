@@ -32,28 +32,40 @@ class BaseTests (unittest.TestCase):
         with self.subTest():
             o = Rectangle.create()
             self.assertIsInstance(o, Rectangle)
+            self.assertEqual(o.x, 0)
+            self.assertEqual(o.y, 0)
             self.assertEqual(o.id, 1)
         with self.subTest():
             o = Square.create()
             self.assertIsInstance(o, Square)
+            self.assertEqual(o.x, 0)
+            self.assertEqual(o.y, 0)
             self.assertEqual(o.id, 2)
         with self.subTest():
             o = Rectangle.create(width=3, height=4)
             self.assertEqual(o.width, 3)
             self.assertEqual(o.height, 4)
+            self.assertEqual(o.x, 0)
+            self.assertEqual(o.y, 0)
             self.assertEqual(o.id, 3)
         with self.subTest():
             o = Rectangle.create(width=4, height=5, extra='extra')
             self.assertEqual(o.width, 4)
             self.assertEqual(o.height, 5)
+            self.assertEqual(o.x, 0)
+            self.assertEqual(o.y, 0)
             self.assertEqual(o.id, 4)
         with self.subTest():
             o = Square.create(size=3)
             self.assertEqual(o.size, 3)
+            self.assertEqual(o.x, 0)
+            self.assertEqual(o.y, 0)
             self.assertEqual(o.id, 5)
         with self.subTest():
             o = Square.create(size=4, extra='extra')
             self.assertEqual(o.size, 4)
+            self.assertEqual(o.x, 0)
+            self.assertEqual(o.y, 0)
             self.assertEqual(o.id, 6)
         with self.subTest():
             o = Rectangle.create(width=1, height=2, x=3, y=4, id='id')
