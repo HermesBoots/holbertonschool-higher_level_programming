@@ -53,3 +53,6 @@ Load instances from a JSON file.
 
 ## JSON, but CSV?
 Load from CSV files in addition to JSON files.
+
+## Let's Draw It
+Draing rectangles and squares in a window using the turtle graphics module.

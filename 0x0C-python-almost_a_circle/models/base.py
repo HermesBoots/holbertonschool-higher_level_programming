@@ -5,6 +5,8 @@
 import csv
 import json
 import os.path
+import random
+import turtle
 
 
 class Base:
@@ -41,6 +43,22 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Draw shapes using graphics"""
+
+        turtle.setheading(0)
+        turtle.penup()
+        for rect in list_rectangles + list_squares:
+            turtle.color(tuple(random.random() for _ in range(3)))
+            turtle.setposition(rect.x, rect.y)
+            turtle.begin_fill()
+            turtle.forward(rect.width)
+            turtle.left(90)
+            turtle.forward(rect.height)
+            turtle.left(90)
+            turtle.forward(rect.width)
+            turtle.left(90)
+            turtle.forward(rect.height)
+            turtle.left(90)
+            turtle.end_fill()
 
     @staticmethod
     def from_json_string(json_string):
