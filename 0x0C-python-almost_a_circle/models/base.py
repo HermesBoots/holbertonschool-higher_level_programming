@@ -38,6 +38,10 @@ class Base:
         return obj
 
     @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw shapes using graphics"""
+
+    @staticmethod
     def from_json_string(json_string):
         """Return a decoded JSON string"""
 
