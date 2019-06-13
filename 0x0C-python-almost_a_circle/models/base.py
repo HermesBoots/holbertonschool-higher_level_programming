@@ -84,17 +84,17 @@ class Base:
 
         if not os.path.exists(cls.__name__ + '.csv'):
             return []
-        with open(cls.__name__ + '.csv', 'rt', newline='') as file:
-            reader = csv.reader(file)
-            objects = list(reader)
         if cls.__name__ == 'Rectangle':
             attrs = ('id', 'width', 'height', 'x', 'y')
         elif cls.__name__ == 'Square':
             attrs = ('id', 'size', 'x', 'y')
-        for l in objects:
-            for i, v in enumerate(l[1:], 1):
-                l[i] = int(v)
-        return [cls.create(**dict(zip(attrs, l))) for l in objects]
+        with open(cls.__name__ + '.csv', 'rt', newline='') as file:
+            reader = csv.DictReader(file, fieldnames=attrs)
+            objects = list(reader)
+        for d in objects:
+            for k, v in d.items():
+                d[k] = int(v) if k != 'id' else v
+        return [cls.create(**d) for d in objects]
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
@@ -106,9 +106,9 @@ class Base:
             attrs = ('id', 'width', 'height', 'x', 'y')
         elif cls.__name__ == 'Square':
             attrs = ('id', 'size', 'x', 'y')
-        list_objs = ([str(getattr(o, a)) for a in attrs] for o in list_objs)
+        list_objs = [{a: getattr(o, a) for a in attrs} for o in list_objs]
         with open(cls.__name__ + '.csv', 'wt', newline='') as file:
-            writer = csv.writer(file)
+            writer = csv.DictWriter(file, fieldnames=attrs)
             for row in list_objs:
                 writer.writerow(row)
 
