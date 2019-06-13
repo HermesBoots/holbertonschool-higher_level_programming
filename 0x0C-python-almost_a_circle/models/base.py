@@ -89,12 +89,10 @@ class Base:
         elif cls.__name__ == 'Square':
             attrs = ('id', 'size', 'x', 'y')
         with open(cls.__name__ + '.csv', 'rt', newline='') as file:
-            reader = csv.DictReader(file, fieldnames=attrs)
+            reader = csv.reader(file)
             objects = list(reader)
-        for d in objects:
-            for k, v in d.items():
-                d[k] = int(v) if k != 'id' else v
-        return [cls.create(**d) for d in objects]
+        objects = ((int(i) for i in l) for l in objects)
+        return [cls.create(**dict(zip(attrs, l))) for l in objects]
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
@@ -106,9 +104,9 @@ class Base:
             attrs = ('id', 'width', 'height', 'x', 'y')
         elif cls.__name__ == 'Square':
             attrs = ('id', 'size', 'x', 'y')
-        list_objs = [{a: getattr(o, a) for a in attrs} for o in list_objs]
+        list_objs = ([getattr(o, a) for a in attrs] for o in list_objs)
         with open(cls.__name__ + '.csv', 'wt', newline='') as file:
-            writer = csv.DictWriter(file, fieldnames=attrs)
+            writer = csv.writer(file)
             for row in list_objs:
                 writer.writerow(row)
 
