@@ -47,3 +47,6 @@ Get the average number in a column in a table.
 
 ## Number by Score
 Counting groups of records and naming pseudo-columns.
+
+## Say My Name
+Showing records in a table sorted by score that don't have a blank name.
