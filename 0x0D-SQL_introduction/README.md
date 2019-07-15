@@ -17,3 +17,6 @@ Creating a table with a couple columns, only if it doesn't exist.
 
 ## Full Description
 Showing the statement used to create a table.
+
+## List All in Table
+Showing all the rows in a table.
