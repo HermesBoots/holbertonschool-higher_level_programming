@@ -14,3 +14,6 @@ Listing the tables in the current database.
 
 ## First Table
 Creating a table with a couple columns, only if it doesn't exist.
+
+## Full Description
+Showing the statement used to create a table.
