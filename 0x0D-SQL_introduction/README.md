@@ -32,3 +32,6 @@ Creating a new table and adding some initial records.
 
 ## List by Best
 Listing some of the columns in the records in a table ordered by one of them.
+
+## Select the Best
+Listing the students in a table that have scores over a certain threshold.
