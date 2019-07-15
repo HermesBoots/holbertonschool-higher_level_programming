@@ -35,3 +35,6 @@ Listing some of the columns in the records in a table ordered by one of them.
 
 ## Select the Best
 Listing the students in a table that have scores over a certain threshold.
+
+## Cheating Is Bad
+Updating a record that matches a pattern.
