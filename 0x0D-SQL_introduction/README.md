@@ -29,3 +29,6 @@ Counting the number of IDs in a row that are equal to 89.
 
 ## Full Creation
 Creating a new table and adding some initial records.
+
+## List by Best
+Listing some of the columns in the records in a table ordered by one of them.
