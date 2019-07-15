@@ -51,6 +51,9 @@ Counting groups of records and naming pseudo-columns.
 ## Say My Name
 Showing records in a table sorted by score that don't have a blank name.
 
+## Go to UTF8
+Convert a database from a character set to UTF-8.
+
 ## Temperatures #0
 Showing the average temperatures in each city from a table of numerous measurements, and sorting the results in descending order.
 
