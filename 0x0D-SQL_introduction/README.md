@@ -20,3 +20,6 @@ Showing the statement used to create a table.
 
 ## List All in Table
 Showing all the rows in a table.
+
+## First Add
+Add a new row containing fixed values for all columns.
