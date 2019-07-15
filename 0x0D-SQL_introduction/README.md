@@ -53,3 +53,6 @@ Showing records in a table sorted by score that don't have a blank name.
 
 ## Temperatures #0
 Showing the average temperatures in each city from a table of numerous measurements, and sorting the results in descending order.
+
+## Temperatures #1
+Showing the highest average temperatures in a two-month period in a table of temperature measurements.
