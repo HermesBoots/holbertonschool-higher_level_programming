@@ -44,3 +44,6 @@ Removing records from a table that meet certain criteria.
 
 ## Average
 Get the average number in a column in a table.
+
+## Number by Score
+Counting groups of records and naming pseudo-columns.
