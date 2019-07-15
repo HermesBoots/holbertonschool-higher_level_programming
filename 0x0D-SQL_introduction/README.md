@@ -38,3 +38,6 @@ Listing the students in a table that have scores over a certain threshold.
 
 ## Cheating Is Bad
 Updating a record that matches a pattern.
+
+## Score too Low
+Removing records from a table that meet certain criteria.
