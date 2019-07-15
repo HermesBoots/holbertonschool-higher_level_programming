@@ -1,5 +1,8 @@
 -- convert a database to the UTF-8 character set and collation
 
+-- go to the database
+USE hbtn_0c_0;
+
 -- change the database defaults
 ALTER DATABASE CHARACTER SET utf8mb4;
 ALTER DATABASE COLLATE utf8mb4_unicode_ci;
