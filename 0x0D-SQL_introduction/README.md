@@ -41,3 +41,6 @@ Updating a record that matches a pattern.
 
 ## Score too Low
 Removing records from a table that meet certain criteria.
+
+## Average
+Get the average number in a column in a table.
