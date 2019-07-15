@@ -56,3 +56,6 @@ Showing the average temperatures in each city from a table of numerous measureme
 
 ## Temperatures #1
 Showing the highest average temperatures in a two-month period in a table of temperature measurements.
+
+## Temperatures #2
+Showing the maximum temperatures measured in each state in a table of temperature measurements.
