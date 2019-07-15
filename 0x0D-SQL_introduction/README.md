@@ -26,3 +26,6 @@ Add a new row containing fixed values for all columns.
 
 ## Count 89
 Counting the number of IDs in a row that are equal to 89.
+
+## Full Creation
+Creating a new table and adding some initial records.
