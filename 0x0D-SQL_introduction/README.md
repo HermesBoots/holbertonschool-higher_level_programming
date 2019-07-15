@@ -11,3 +11,6 @@ Deleting a database without failing if it doesn't exist.
 
 ## List Tables
 Listing the tables in the current database.
+
+## First Table
+Creating a table with a couple columns, only if it doesn't exist.
