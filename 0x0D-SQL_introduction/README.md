@@ -23,3 +23,6 @@ Showing all the rows in a table.
 
 ## First Add
 Add a new row containing fixed values for all columns.
+
+## Count 89
+Counting the number of IDs in a row that are equal to 89.
