@@ -53,3 +53,6 @@ Listing all shows and their genre names even if the shows have no genre.
 
 ## Not My Genre
 Listing genres that don't describe Dexter.
+
+## No Comedy Tonight!
+Listing all shows that aren't comedies.
