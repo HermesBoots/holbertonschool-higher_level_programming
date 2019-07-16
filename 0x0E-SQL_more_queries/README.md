@@ -23,3 +23,6 @@ Creating a new database and table using a primary key.
 
 ## Cities Table
 Creating a new table with cities that references the previous table.
+
+## Cities of California
+Listing all the cities in california using a sub-query.
