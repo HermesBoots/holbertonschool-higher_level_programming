@@ -47,3 +47,6 @@ Listing the genres associated with a show using multiple `JOIN` clauses.
 
 ## Only Comedy
 Listing only comedy shows.
+
+## List Shows and Genres
+Listing all shows and their genre names even if the shows have no genre.
