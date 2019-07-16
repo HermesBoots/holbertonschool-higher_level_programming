@@ -32,3 +32,6 @@ Listing all cities and the states the reside in using `JOIN`.
 
 ## Genre ID by Show
 Joining a table of show genres with the main table of shows.
+
+## Genre ID for All Shows
+Including shows in the genre listing even if they have no genre at all.
