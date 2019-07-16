@@ -26,3 +26,6 @@ Creating a new table with cities that references the previous table.
 
 ## Cities of California
 Listing all the cities in california using a sub-query.
+
+## Cities by States
+Listing all cities and the states the reside in using `JOIN`.
