@@ -56,3 +56,6 @@ Listing genres that don't describe Dexter.
 
 ## No Comedy Tonight!
 Listing all shows that aren't comedies.
+
+## Rotten Tomatoes
+Joining TV shows with their ratings and summing the ratings.
