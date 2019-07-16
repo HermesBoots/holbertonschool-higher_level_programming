@@ -17,3 +17,6 @@ Creating a table with a row with a default value.
 
 ## Unique ID
 Creating a table that requires values in a column to be unique.
+
+## States Table
+Creating a new database and table using a primary key.
