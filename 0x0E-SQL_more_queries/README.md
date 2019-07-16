@@ -41,3 +41,6 @@ Only listing the shows that don't have genres.
 
 ## Number of Shows by Genre
 Listing the number of shows in each genre.
+
+## My Genres
+Listing the genres associated with a show using multiple `JOIN` clauses.
