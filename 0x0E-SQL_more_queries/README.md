@@ -50,3 +50,6 @@ Listing only comedy shows.
 
 ## List Shows and Genres
 Listing all shows and their genre names even if the shows have no genre.
+
+## Not My Genre
+Listing genres that don't describe Dexter.
