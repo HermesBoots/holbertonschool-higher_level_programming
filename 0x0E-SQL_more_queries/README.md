@@ -38,3 +38,6 @@ Including shows in the genre listing even if they have no genre at all.
 
 ## No Genre
 Only listing the shows that don't have genres.
+
+## Number of Shows by Genre
+Listing the number of shows in each genre.
