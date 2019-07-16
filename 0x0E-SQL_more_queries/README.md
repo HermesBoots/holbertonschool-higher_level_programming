@@ -14,3 +14,6 @@ Creating a table that doesn't allow null values for a column.
 
 ## ID Can't Be Null
 Creating a table with a row with a default value.
+
+## Unique ID
+Creating a table that requires values in a column to be unique.
