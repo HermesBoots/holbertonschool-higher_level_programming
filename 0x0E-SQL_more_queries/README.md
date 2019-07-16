@@ -59,3 +59,6 @@ Listing all shows that aren't comedies.
 
 ## Rotten Tomatoes
 Joining TV shows with their ratings and summing the ratings.
+
+## Best Genre
+Listing the genres with the best total scores.
