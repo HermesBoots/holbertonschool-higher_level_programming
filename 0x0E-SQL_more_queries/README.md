@@ -20,3 +20,6 @@ Creating a table that requires values in a column to be unique.
 
 ## States Table
 Creating a new database and table using a primary key.
+
+## Cities Table
+Creating a new table with cities that references the previous table.
