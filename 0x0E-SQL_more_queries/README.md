@@ -8,3 +8,6 @@ Creating a new user and giving it full privileges.
 
 ## Read User
 Creating a new database and a new user that can only read from that database.
+
+## Always a Name
+Creating a table that doesn't allow null values for a column.
