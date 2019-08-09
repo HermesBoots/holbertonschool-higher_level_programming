@@ -11,3 +11,6 @@ List states with a name given as an argument.
 
 ## SQL Injection...
 Ensure SQL injection is impossible in previous task.
+
+## Cities by States
+List cities and states together using JOIN.
