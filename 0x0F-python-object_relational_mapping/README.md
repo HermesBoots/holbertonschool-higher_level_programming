@@ -17,3 +17,6 @@ List cities and states together using JOIN.
 
 ## All Cities by State
 List all cities in a given state.
+
+## First State Model
+Create an ORM model for a database table.
