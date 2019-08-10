@@ -19,7 +19,7 @@ def main():
         db=sys.argv[3]
     )
     cursor = connection.cursor()
-    cursor.execute('SELECT * FROM `states`;')
+    cursor.execute('SELECT * FROM `states` ORDER BY `id` ASC;')
     records = cursor.fetchall()
     print('\n'.join(str(record) for record in sorted(records)))
 
