@@ -38,3 +38,6 @@ Introduce a new state object to the database.
 
 ## Update a State
 Edit a record with ORM.
+
+## Delete States
+Delete all states with names containing A.
