@@ -44,3 +44,6 @@ Delete all states with names containing A.
 
 ## Cities in State
 List cities and their states.
+
+## City Relationship
+Set up an ORM relationship attribute that abstracts table foreign constraints.
