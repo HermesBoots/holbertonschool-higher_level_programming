@@ -26,7 +26,7 @@ def main():
     ''')
     records = cursor.fetchall()
     if len(records) > 0:
-        print('\n'.join(str(record) for record in sorted(records)))
+        print('\n'.join(str(record) for record in records))
 
 
 if __name__ == '__main__':
