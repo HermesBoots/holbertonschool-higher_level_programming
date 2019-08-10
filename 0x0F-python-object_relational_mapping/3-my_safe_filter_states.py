@@ -19,10 +19,10 @@ def main():
         db=sys.argv[3]
     )
     cursor = connection.cursor()
-    cursor.execute(
-        'SELECT * FROM `states` WHERE `name` = %s;',
-        (sys.argv[4],)
-    )
+    cursor.execute('''
+        SELECT * FROM `states`
+        WHERE BINARY `name` = %s ORDER BY `id` ASC
+    ''', (sys.argv[4],))
     records = cursor.fetchall()
     if len(records) > 0:
         print('\n'.join(str(record) for record in sorted(records)))
