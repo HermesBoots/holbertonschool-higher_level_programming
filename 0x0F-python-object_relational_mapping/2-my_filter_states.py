@@ -20,7 +20,7 @@ def main():
     )
     cursor = connection.cursor()
     cursor.execute(
-        'SELECT * FROM `states` WHERE `name` = {};'.format(sys.argv[4])
+        'SELECT * FROM `states` WHERE `name` = "{}";'.format(sys.argv[4])
     )
     records = cursor.fetchall()
     if len(records) > 0:
