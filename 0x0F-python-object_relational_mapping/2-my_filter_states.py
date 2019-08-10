@@ -9,8 +9,6 @@ import sys
 def main():
     """List the names and IDs of U.S. states in a database"""
 
-    if len(sys.argv) < 5:
-        sys.exit(1)
     connection = MySQLdb.connect(
         host='localhost',
         port=3306,
@@ -19,12 +17,13 @@ def main():
         db=sys.argv[3]
     )
     cursor = connection.cursor()
-    cursor.execute(
-        'SELECT * FROM `states` WHERE `name` = "{}";'.format(sys.argv[4])
-    )
+    cursor.execute('''
+        SELECT * FROM `states`
+        WHERE `name` = '{}' ORDER BY `id`
+    '''.format(sys.argv[4]))
     records = cursor.fetchall()
     if len(records) > 0:
-        print('\n'.join(str(record) for record in sorted(records)))
+        print('\n'.join(str(record) for record in records))
 
 
 if __name__ == '__main__':
