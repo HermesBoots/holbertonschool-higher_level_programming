@@ -32,3 +32,6 @@ List all states with A in their name.
 
 ## Get State
 Get a single state by name with ORM.
+
+## Add a New State
+Introduce a new state object to the database.
