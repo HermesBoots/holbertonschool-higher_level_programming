@@ -29,3 +29,6 @@ Display the state with the lowest ID.
 
 ## Contains A
 List all states with A in their name.
+
+## Get State
+Get a single state by name with ORM.
