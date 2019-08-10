@@ -41,3 +41,6 @@ Edit a record with ORM.
 
 ## Delete States
 Delete all states with names containing A.
+
+## Cities in State
+List cities and their states.
