@@ -20,3 +20,6 @@ List all cities in a given state.
 
 ## First State Model
 Create an ORM model for a database table.
+
+## All States via SQLAlchemy
+List all states with ORM.
