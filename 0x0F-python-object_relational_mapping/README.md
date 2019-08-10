@@ -35,3 +35,6 @@ Get a single state by name with ORM.
 
 ## Add a New State
 Introduce a new state object to the database.
+
+## Update a State
+Edit a record with ORM.
