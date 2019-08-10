@@ -22,6 +22,8 @@ def main():
     cursor.execute('SELECT * FROM `states` ORDER BY `id` ASC;')
     records = cursor.fetchall()
     print('\n'.join(str(record) for record in sorted(records)))
+    cursor.close()
+    connection.close()
 
 
 if __name__ == '__main__':
