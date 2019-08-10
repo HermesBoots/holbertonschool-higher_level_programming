@@ -23,3 +23,6 @@ Create an ORM model for a database table.
 
 ## All States via SQLAlchemy
 List all states with ORM.
+
+## First State
+Display the state with the lowest ID.
