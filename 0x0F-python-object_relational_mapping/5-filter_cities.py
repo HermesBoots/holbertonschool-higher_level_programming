@@ -28,5 +28,6 @@ def main():
     records = cursor.fetchall()
     print(', '.join(record[0] for record in records))
 
+
 if __name__ == '__main__':
     main()

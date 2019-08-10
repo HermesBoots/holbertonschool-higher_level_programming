@@ -23,5 +23,6 @@ def main():
     records = cursor.fetchall()
     print('\n'.join(str(record) for record in sorted(records)))
 
+
 if __name__ == '__main__':
     main()
