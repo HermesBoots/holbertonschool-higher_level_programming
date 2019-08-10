@@ -19,7 +19,7 @@ def main():
     cursor = connection.cursor()
     cursor.execute('''
         SELECT * FROM `states`
-        WHERE `name` = '{}' ORDER BY `id`
+        WHERE BINARY `name` = '{}' ORDER BY `id`
     '''.format(sys.argv[4]))
     records = cursor.fetchall()
     if len(records) > 0:
