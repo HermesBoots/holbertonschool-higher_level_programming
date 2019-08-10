@@ -19,7 +19,8 @@ def main():
     cursor = connection.cursor()
     cursor.execute('SELECT * FROM `states` ORDER BY `id` ASC;')
     records = cursor.fetchall()
-    print('\n'.join(str(record) for record in records))
+    if len(records) > 0:
+        print('\n'.join(str(record) for record in records))
     cursor.close()
     connection.close()
 
