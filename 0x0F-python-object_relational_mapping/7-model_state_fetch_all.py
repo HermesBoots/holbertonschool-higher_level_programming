@@ -22,7 +22,8 @@ def main():
     Session = sqlalchemy.orm.sessionmaker(bind=engine)
     session = Session()
     query = session.query(State).order_by(State.id)
-    print('\n'.join(str(state.id) + ': ' + state.name for state in query))
+    if query.count() > 0:
+        print('\n'.join(str(state.id) + ': ' + state.name for state in query))
 
 
 if __name__ == '__main__':
