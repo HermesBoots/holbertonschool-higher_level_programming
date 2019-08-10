@@ -14,3 +14,6 @@ Ensure SQL injection is impossible in previous task.
 
 ## Cities by States
 List cities and states together using JOIN.
+
+## All Cities by State
+List all cities in a given state.
