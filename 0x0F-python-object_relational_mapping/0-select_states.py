@@ -16,12 +16,12 @@ def main():
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3]
+        dbname=sys.argv[3]
     )
     cursor = connection.cursor()
     cursor.execute('SELECT * FROM `states` ORDER BY `id` ASC;')
     records = cursor.fetchall()
-    print('\n'.join(str(record) for record in sorted(records)))
+    print('\n'.join(str(record) for record in records))
     cursor.close()
     connection.close()
 
