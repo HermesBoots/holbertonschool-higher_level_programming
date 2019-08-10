@@ -26,7 +26,8 @@ def main():
         ORDER BY `cities`.`id`
     ''', (sys.argv[4],))
     records = cursor.fetchall()
-    print(', '.join(record[0] for record in records))
+    if len(records) > 0:
+        print(', '.join(record[0] for record in records))
 
 
 if __name__ == '__main__':
