@@ -26,3 +26,6 @@ List all states with ORM.
 
 ## First State
 Display the state with the lowest ID.
+
+## Contains A
+List all states with A in their name.
