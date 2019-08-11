@@ -25,4 +25,3 @@ class City (Base):
         sqlalchemy.Integer,
         sqlalchemy.ForeignKey('states.id')
     )
-    state = sqlalchemy.orm.relationship('State', back_populates='cities')

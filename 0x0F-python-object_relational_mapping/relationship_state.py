@@ -26,5 +26,5 @@ class State (Base):
     cities = sqlalchemy.orm.relationship(
         'City',
         back_populates='state',
-        cascade='delete'
+        cascade='all, delete'
     )
