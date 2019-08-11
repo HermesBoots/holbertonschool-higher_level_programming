@@ -2,7 +2,7 @@
 """Module to create a city and state"""
 
 
-from relationship_city import Base, State
+from relationship_city import Base, City, State
 import sqlalchemy
 import sqlalchemy.orm
 import sys
