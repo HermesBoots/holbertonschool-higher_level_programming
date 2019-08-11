@@ -19,9 +19,16 @@ class City (Base):
     """
 
     __tablename__ = 'cities'
-    id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
+    id = sqlalchemy.Column(
+        sqlalchemy.Integer,
+        autoincrement=True,
+        nullable=False,
+        primary_key=True,
+        unique=True
+    )
     name = sqlalchemy.Column(sqlalchemy.String(256), nullable=False)
     state_id = sqlalchemy.Column(
         sqlalchemy.Integer,
-        sqlalchemy.ForeignKey('states.id')
+        sqlalchemy.ForeignKey('states.id'),
+        nullable=False
     )

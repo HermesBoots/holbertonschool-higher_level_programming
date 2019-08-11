@@ -21,10 +21,16 @@ class State (Base):
     """
 
     __tablename__ = 'states'
-    id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
+    id = sqlalchemy.Column(
+        sqlalchemy.Integer,
+        autoincrement=True,
+        nullable=False,
+        primary_key=True,
+        unique=True
+    )
     name = sqlalchemy.Column(sqlalchemy.String(256), nullable=False)
     cities = sqlalchemy.orm.relationship(
         'City',
-        back_populates='state',
-        cascade='all, delete'
+        backref='state',
+        cascade='all, delete-orphan'
     )
