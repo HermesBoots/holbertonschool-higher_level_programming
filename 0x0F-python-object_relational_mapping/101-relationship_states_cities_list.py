@@ -2,7 +2,7 @@
 """Module to create a city and state"""
 
 
-from relationship_city import Base, City, State
+from relationship_city import Base, State
 import sqlalchemy
 import sqlalchemy.orm
 import sys
@@ -21,7 +21,7 @@ def main():
     Base.metadata.create_all(engine)
     Session = sqlalchemy.orm.sessionmaker(bind=engine)
     session = Session()
-    rows = session.query(State).join(City).order_by(State.id).order_by(City.id)
+    rows = session.query(State).order_by(State.id)
     for state in rows:
         print(str(state.id) + ': ' + state.name)
         for city in state.cities:
