@@ -31,6 +31,6 @@ class State (Base):
     name = sqlalchemy.Column(sqlalchemy.String(256), nullable=False)
     cities = sqlalchemy.orm.relationship(
         'City',
-        backref='state',
+        backref=sqlalchemy.orm.backref('state', cascade='all'),
         cascade='all, delete-orphan'
     )
