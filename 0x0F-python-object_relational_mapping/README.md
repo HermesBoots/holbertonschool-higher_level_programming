@@ -50,3 +50,6 @@ Set up an ORM relationship attribute that abstracts table foreign constraints.
 
 ## List Relationship
 List all states and each city in each state.
+
+## From City
+List all cities and their states only querying states.
