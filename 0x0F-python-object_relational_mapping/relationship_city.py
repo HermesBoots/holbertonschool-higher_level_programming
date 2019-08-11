@@ -2,7 +2,7 @@
 """Module for City class"""
 
 
-from model_state import Base, State
+from relationship_state import Base, State
 import sqlalchemy
 import sqlalchemy.orm
 
@@ -19,16 +19,10 @@ class City (Base):
     """
 
     __tablename__ = 'cities'
-    id = sqlalchemy.Column(
-        sqlalchemy.Integer,
-        autoincrement=True,
-        nullable=False,
-        primary_key=True,
-        unique=True
-    )
+    id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
     name = sqlalchemy.Column(sqlalchemy.String(256), nullable=False)
     state_id = sqlalchemy.Column(
         sqlalchemy.Integer,
-        sqlalchemy.ForeignKey('states.id'),
-        nullable=False
+        sqlalchemy.ForeignKey('states.id')
     )
+    state = sqlalchemy.orm.relationship('State', back_populates='cities')
