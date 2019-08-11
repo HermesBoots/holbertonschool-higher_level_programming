@@ -47,3 +47,6 @@ List cities and their states.
 
 ## City Relationship
 Set up an ORM relationship attribute that abstracts table foreign constraints.
+
+## List Relationship
+List all states and each city in each state.
