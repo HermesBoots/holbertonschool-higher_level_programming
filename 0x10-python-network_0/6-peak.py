@@ -18,7 +18,7 @@ def find_peak(list_of_integers):
     index = subLen // 2
     while subLen > 0:
         if nums[index - 1] < nums[index] and nums[index + 1] < nums[index]:
-            return nums[index - 1:index + 2]
+            return nums[index]
         if nums[index + 1] > nums[index]:
             left = index + 1
             subLen = right - left
@@ -27,4 +27,4 @@ def find_peak(list_of_integers):
             right = index
             subLen = right - left
             index = left + subLen // 2
-    return nums[index - 1:index + 2]
+    return nums[index]
