@@ -16,10 +16,7 @@ def find_peak(list_of_integers):
     left = 1
     right = subLen + 1
     index = subLen // 2
-    print()
     while subLen > 0:
-        print('left:', left - 1, 'index:', index - 1, 'right:', right - 1)
-        print('range:', nums[index - 1:index + 2])
         if nums[index - 1] < nums[index] and nums[index + 1] < nums[index]:
             return nums[index - 1:index + 2]
         if nums[index + 1] > nums[index]:
