@@ -8,3 +8,6 @@ Display the content of a remote resource.
 
 ## cURL Method
 Send a DELETE request to a remote resource.
+
+## cURL Only Methods
+List the methods allowed on a remote resource.
