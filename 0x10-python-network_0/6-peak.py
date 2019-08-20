@@ -15,7 +15,6 @@ def find_peak(list_of_integers):
     gap = len(ints) // 2
     index = gap - 1
     while gap > 0:
-        print('index:', index)
         if (
             (index == 0 and ints[index] > ints[index + 1]) or
             (index == len(ints) - 1 and ints[index] > ints[index - 1]) or
