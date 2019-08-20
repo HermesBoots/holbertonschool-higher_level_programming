@@ -18,6 +18,9 @@ Send a request with a special header to a remote resource.
 ## cURL POST Parameters
 Send a POST request with a specified request body.
 
+## Find a Peak
+Finding a local peak in a list of integers.
+
 ## Only Status Code
 Display the status code of a response using just 1 `curl` command.
 
