@@ -11,3 +11,6 @@ Send a DELETE request to a remote resource.
 
 ## cURL Only Methods
 List the methods allowed on a remote resource.
+
+## cURL Headers
+Send a request with a special header to a remote resource.
