@@ -5,25 +5,29 @@
 def find_peak(list_of_integers):
     """Find a peak in a list of integers"""
 
-    if len(list_of_integers) < 1:
+    subLen = len(list_of_integers)
+    if subLen < 1:
         return None
-    if len(list_of_integers) == 1:
+    if subLen == 1:
         return list_of_integers[0]
-    if len(list_of_integers) == 2:
+    if subLen == 2:
         return max(list_of_integers)
-    ints = list_of_integers
-    gap = len(ints) // 2
-    index = gap - 1
-    while gap > 0:
-        if (
-            (index == 0 and ints[index] > ints[index + 1]) or
-            (index == len(ints) - 1 and ints[index] > ints[index - 1]) or
-            (ints[index] > ints[index - 1] and ints[index] > ints[index + 1])
-        ):
-            return ints[index]
-        gap = (gap + 1) // 2 if gap > 1 else 0
-        if index < len(ints) - 1 and ints[index + 1] > ints[index]:
-            index += gap
+    nums = [float('-inf')] + list_of_integers + [float('-inf')]
+    left = 1
+    right = subLen + 1
+    index = subLen // 2
+    print()
+    while subLen > 0:
+        print('left:', left - 1, 'index:', index - 1, 'right:', right - 1)
+        print('range:', nums[index - 1:index + 2])
+        if nums[index - 1] < nums[index] and nums[index + 1] < nums[index]:
+            return nums[index - 1:index + 2]
+        if nums[index + 1] > nums[index]:
+            left = index + 1
+            subLen = right - left
+            index = left + subLen // 2
         else:
-            index -= gap
-    return ints[index]
+            right = index
+            subLen = right - left
+            index = left + subLen // 2
+    return nums[index - 1:index + 2]
