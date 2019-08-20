@@ -20,3 +20,6 @@ Send a POST request with a specified request body.
 
 ## Only Status Code
 Display the status code of a response using just 1 `curl` command.
+
+## cURL a JSON File
+Send a JSON file as a request body to a site.
