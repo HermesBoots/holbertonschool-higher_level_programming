@@ -6,13 +6,13 @@ def do_find_peak(nums, left, right):
     """Recursive helper function for find_peak"""
 
     if left >= right:
-        return ([float('-inf')] + nums + [float('-inf')])[left:left+3]
+        return nums[left]
     index = left + (right - left) // 2
     if (
         (index == len(nums) - 1 or nums[index + 1] < nums[index]) and
         (index == 0 or nums[index - 1] < nums[index])
     ):
-        return ([float('-inf')] + nums + [float('-inf')])[index:index+3]
+        return nums[index]
     if index < len(nums) - 1 and nums[index + 1] > nums[index]:
         return do_find_peak(nums, index + 1, right)
     else:
