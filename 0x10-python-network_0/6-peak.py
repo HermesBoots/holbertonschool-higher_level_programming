@@ -2,29 +2,30 @@
 """Module to find a peak in a list of numbers"""
 
 
+def do_find_peak(nums, left, right):
+    """Recursive helper function for find_peak"""
+
+    if left >= right:
+        return ([float('-inf')] + nums + [float('-inf')])[left:left+3]
+    index = left + (right - left) // 2
+    if (
+        (index == len(nums) - 1 or nums[index + 1] < nums[index]) and
+        (index == 0 or nums[index - 1] < nums[index])
+    ):
+        return ([float('-inf')] + nums + [float('-inf')])[index:index+3]
+    if index < len(nums) - 1 and nums[index + 1] > nums[index]:
+        return do_find_peak(nums, index + 1, right)
+    else:
+        return do_find_peak(nums, left, index)
+
 def find_peak(list_of_integers):
     """Find a peak in a list of integers"""
 
-    subLen = len(list_of_integers)
-    if subLen < 1:
+    length = len(list_of_integers)
+    if length < 1:
         return None
-    if subLen == 1:
+    if length == 1:
         return list_of_integers[0]
-    if subLen == 2:
+    if length == 2:
         return max(list_of_integers)
-    nums = [float('-inf')] + list_of_integers + [float('-inf')]
-    left = 1
-    right = subLen + 1
-    index = subLen // 2
-    while subLen > 0:
-        if nums[index - 1] < nums[index] and nums[index + 1] < nums[index]:
-            return nums[index]
-        if nums[index + 1] > nums[index]:
-            left = index + 1
-            subLen = right - left
-            index = left + subLen // 2
-        else:
-            right = index
-            subLen = right - left
-            index = left + subLen // 2
-    return nums[index]
+    return do_find_peak(list_of_integers, 0, length)
