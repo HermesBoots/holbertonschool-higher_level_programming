@@ -18,6 +18,7 @@ def do_find_peak(nums, left, right):
     else:
         return do_find_peak(nums, left, index)
 
+
 def find_peak(list_of_integers):
     """Find a peak in a list of integers"""
 
