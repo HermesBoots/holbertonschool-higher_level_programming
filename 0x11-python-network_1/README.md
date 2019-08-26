@@ -23,3 +23,6 @@ Send a POST request with content to a server.
 
 ## Error Code #1
 Send a request to a URL, handling HTTP errors.
+
+## Search API
+Sending POST requests to a resource and parsing JSON responses.
