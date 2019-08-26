@@ -27,5 +27,8 @@ Send a request to a URL, handling HTTP errors.
 ## Search API
 Sending POST requests to a resource and parsing JSON responses.
 
+## Star Wars API #0
+Query people from the Star Wars API.
+
 ## My GitHub!
 Use the GitHub API to get a user's ID number.
