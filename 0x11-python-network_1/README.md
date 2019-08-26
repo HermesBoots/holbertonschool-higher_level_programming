@@ -14,3 +14,6 @@ Send a request to a URL, handling HTTP errors.
 
 ## What's My Status? #1
 Retrieve a resource and display information about it.
+
+## Response Header Value #0
+Display response headers.
