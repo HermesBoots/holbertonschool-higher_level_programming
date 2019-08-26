@@ -17,3 +17,6 @@ Retrieve a resource and display information about it.
 
 ## Response Header Value #0
 Display response headers.
+
+## POST an Email #0
+Send a POST request with content to a server.
