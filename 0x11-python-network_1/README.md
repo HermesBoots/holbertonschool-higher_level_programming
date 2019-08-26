@@ -35,3 +35,6 @@ Use the GitHub API to get a user's ID number.
 
 ## Time for an Interview!
 Get the last 10 commits on a repository using the GitHub API.
+
+## Star Wars API #1
+Display all results from a Star Wars API query, using the pagination system.
