@@ -11,7 +11,7 @@ if __name__ == '__main__':
         body = {'q': '""'}
     else:
         body = {'q': sys.argv[1]}
-    response = request.post('http://0.0.0.0:5000/search_user', body)
+    response = requests.post('http://0.0.0.0:5000/search_user', body)
     try:
         body = response.json()
     except ValueError:
