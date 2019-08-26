@@ -15,8 +15,11 @@ Send a request to a URL, handling HTTP errors.
 ## What's My Status? #1
 Retrieve a resource and display information about it.
 
-## Response Header Value #0
+## Response Header Value #1
 Display response headers.
 
-## POST an Email #0
+## POST an Email #1
 Send a POST request with content to a server.
+
+## Error Code #1
+Send a request to a URL, handling HTTP errors.
