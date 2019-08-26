@@ -8,3 +8,6 @@ Display response headers.
 
 ## POST an Email #0
 Send a POST request with content to a server.
+
+## Error Code #0
+Send a request to a URL, handling HTTP errors.
