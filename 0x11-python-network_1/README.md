@@ -38,3 +38,6 @@ Get the last 10 commits on a repository using the GitHub API.
 
 ## Star Wars API #1
 Display all results from a Star Wars API query, using the pagination system.
+
+## Star Wars API #2
+Make related queries to the Star Wars API.
