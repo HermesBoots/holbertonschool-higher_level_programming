@@ -12,7 +12,7 @@ if __name__ == '__main__':
     response = requests.post(
         'https://api.twitter.com/oauth2/token',
         headers={
-            'Authorization': 'Basic ' + consumer,
+            'Authorization': 'Basic ' + consumer.decode(),
             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
         },
         data={'grant_type': 'client_credentials'}
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     response = requests.get(
         'https://api.twitter.com/1.1/search/tweets.json',
         headers={'Authorization': 'Bearer ' + token},
-        params={'q': sys.argv[3], 'count': 5}
+        params={'q': sys.argv[3], 'count': '5'}
     )
     tweets = response.json().get('statuses')
     for tweet in tweets:
