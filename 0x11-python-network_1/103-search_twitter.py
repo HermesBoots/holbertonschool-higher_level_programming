@@ -8,7 +8,7 @@ import sys
 
 
 if __name__ == '__main__':
-    consumer = base64.b64encode((sys.argv[1] + ':' + sys.argv[1]).encode())
+    consumer = base64.b64encode((sys.argv[1] + ':' + sys.argv[2]).encode())
     response = requests.post(
         'https://api.twitter.com/oauth2/token',
         headers={
