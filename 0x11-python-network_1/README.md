@@ -41,3 +41,6 @@ Display all results from a Star Wars API query, using the pagination system.
 
 ## Star Wars API #2
 Make related queries to the Star Wars API.
+
+## Twitter Auth
+Blindly code for the Twitter API without having access to it.
