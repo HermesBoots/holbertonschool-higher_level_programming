@@ -26,7 +26,7 @@ if __name__ == '__main__':
     tweets = response.json().get('statuses')
     for tweet in tweets:
         print('[{}] {} by {}'.format(
-            tweet.get('id_str'),
+            tweet.get('id'),
             tweet.get('text'),
             tweet.get('user').get('name')
         ))
