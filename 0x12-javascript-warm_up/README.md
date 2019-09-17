@@ -26,3 +26,6 @@ Use command-line argument as a loop limit.
 
 ## Square
 Print a square of X using a loop.
+
+## Add
+Create a function to add two numbers.
