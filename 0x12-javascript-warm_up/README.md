@@ -11,3 +11,6 @@ Check command-line arguments.
 
 ## Value of My Argument
 Check command-line arguments without using array `length`.
+
+## Create a Sentence
+Concatenate values with a string.
