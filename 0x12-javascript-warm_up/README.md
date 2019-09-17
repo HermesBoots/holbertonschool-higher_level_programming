@@ -47,3 +47,6 @@ Modify a variable in another file's scope.
 
 ## Call Me Moby
 Write a function that calls another function taken as an argument.
+
+## Add Me Maybe
+Increment a value before passing it to a function parameter.
