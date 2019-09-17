@@ -41,3 +41,6 @@ Replace a property of an object.
 
 ## Add File
 Make a function available to other files.
+
+## Const or Not Const
+Modify a variable in another file's scope.
