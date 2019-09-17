@@ -20,3 +20,6 @@ Convert a string to an integer.
 
 ## Loop to Languages
 Print lines by looping through an array of strings.
+
+## I Love C
+Use command-line argument as a loop limit.
