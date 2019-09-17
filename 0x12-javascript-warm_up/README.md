@@ -23,3 +23,6 @@ Print lines by looping through an array of strings.
 
 ## I Love C
 Use command-line argument as a loop limit.
+
+## Square
+Print a square of X using a loop.
