@@ -29,3 +29,6 @@ Print a square of X using a loop.
 
 ## Add
 Create a function to add two numbers.
+
+## Factorial
+Create a recursive factorial function.
