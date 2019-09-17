@@ -50,3 +50,6 @@ Write a function that calls another function taken as an argument.
 
 ## Add Me Maybe
 Increment a value before passing it to a function parameter.
+
+## Increment Object
+Add a method to an object.
