@@ -2,3 +2,6 @@
 
 ## First Constant, First Print
 Create and print a simple variable.
+
+## 3 Languages
+Print 3 lines.
