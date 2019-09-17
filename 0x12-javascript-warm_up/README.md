@@ -44,3 +44,6 @@ Make a function available to other files.
 
 ## Const or Not Const
 Modify a variable in another file's scope.
+
+## Call Me Moby
+Write a function that calls another function taken as an argument.
