@@ -38,3 +38,6 @@ Find the second-largest value in the arguments array.
 
 ## Object
 Replace a property of an object.
+
+## Add File
+Make a function available to other files.
