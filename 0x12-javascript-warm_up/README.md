@@ -32,3 +32,6 @@ Create a function to add two numbers.
 
 ## Factorial
 Create a recursive factorial function.
+
+## Second Biggest!
+Find the second-largest value in the arguments array.
