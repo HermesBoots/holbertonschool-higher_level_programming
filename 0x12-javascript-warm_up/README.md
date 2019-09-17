@@ -14,3 +14,6 @@ Check command-line arguments without using array `length`.
 
 ## Create a Sentence
 Concatenate values with a string.
+
+## An Integer
+Convert a string to an integer.
