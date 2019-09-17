@@ -35,3 +35,6 @@ Create a recursive factorial function.
 
 ## Second Biggest!
 Find the second-largest value in the arguments array.
+
+## Object
+Replace a property of an object.
