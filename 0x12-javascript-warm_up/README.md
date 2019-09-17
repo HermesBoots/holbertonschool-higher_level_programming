@@ -17,3 +17,6 @@ Concatenate values with a string.
 
 ## An Integer
 Convert a string to an integer.
+
+## Loop to Languages
+Print lines by looping through an array of strings.
