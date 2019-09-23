@@ -35,3 +35,6 @@ Return a function that converts number radixes.
 
 ## Factor Index
 Multiply items in a list by their indexes.
+
+## Sorted Occurrences
+Swapping keys and values in an object.
