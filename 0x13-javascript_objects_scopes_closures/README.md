@@ -29,3 +29,6 @@ Reverse an array.
 
 ## Log Me
 Simulate static variables.
+
+## Number Conversion
+Return a function that converts number radixes.
