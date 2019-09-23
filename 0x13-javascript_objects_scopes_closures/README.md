@@ -20,3 +20,6 @@ Create a class that inherits from another.
 
 ## Square #1
 Add a new method to the subclass.
+
+## Occurrences
+Count the number of occurrences of an item in an array.
