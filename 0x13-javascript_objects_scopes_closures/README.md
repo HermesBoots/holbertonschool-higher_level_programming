@@ -8,3 +8,6 @@ Create a class with a constructor.
 
 ## Rectangle #2
 Create a class with a constructor that checks arguments.
+
+## Rectangle #3
+Add a new method to a class.
