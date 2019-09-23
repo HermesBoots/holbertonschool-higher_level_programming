@@ -11,3 +11,6 @@ Create a class with a constructor that checks arguments.
 
 ## Rectangle #3
 Add a new method to a class.
+
+## Rectangle #4
+Add a few new methods to a class.
