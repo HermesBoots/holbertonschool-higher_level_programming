@@ -17,3 +17,6 @@ Add a few new methods to a class.
 
 ## Square #0
 Create a class that inherits from another.
+
+## Square #1
+Add a new method to the subclass.
