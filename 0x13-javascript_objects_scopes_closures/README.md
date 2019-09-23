@@ -32,3 +32,6 @@ Simulate static variables.
 
 ## Number Conversion
 Return a function that converts number radixes.
+
+## Factor Index
+Multiply items in a list by their indexes.
