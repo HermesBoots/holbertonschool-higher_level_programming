@@ -14,3 +14,6 @@ Add a new method to a class.
 
 ## Rectangle #4
 Add a few new methods to a class.
+
+## Square #0
+Create a class that inherits from another.
