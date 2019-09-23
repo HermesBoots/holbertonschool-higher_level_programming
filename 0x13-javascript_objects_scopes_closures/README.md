@@ -26,3 +26,6 @@ Count the number of occurrences of an item in an array.
 
 ## Esrever
 Reverse an array.
+
+## Log Me
+Simulate static variables.
