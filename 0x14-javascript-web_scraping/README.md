@@ -20,3 +20,6 @@ Copy the body of an HTTP response to a file.
 
 ## How Many Completed?
 Return object containing counts of completed tasks from an API endpoint.
+
+## Who Was Playing in This Movie?
+Query related endpoints to find characters in a Star Wars movie.
