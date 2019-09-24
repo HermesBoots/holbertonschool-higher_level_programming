@@ -23,3 +23,6 @@ Return object containing counts of completed tasks from an API endpoint.
 
 ## Who Was Playing in This Movie?
 Query related endpoints to find characters in a Star Wars movie.
+
+## Right Order
+Repeat previous task but print character list in order.
