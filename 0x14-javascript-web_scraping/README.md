@@ -26,3 +26,6 @@ Query related endpoints to find characters in a Star Wars movie.
 
 ## Right Order
 Repeat previous task but print character list in order.
+
+## Twitter Auth
+Write a script that uses the Twitter search API.
