@@ -17,3 +17,6 @@ Get the number of a times a linked resource appears in an API endpoint.
 
 ## Loripsum
 Copy the body of an HTTP response to a file.
+
+## How Many Completed?
+Return object containing counts of completed tasks from an API endpoint.
