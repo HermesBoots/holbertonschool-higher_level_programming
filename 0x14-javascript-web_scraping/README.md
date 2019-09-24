@@ -11,3 +11,6 @@ Get the status code when querying a web server.
 
 ## Star Wars Movie Title
 Get the title of a Star Wars movie by number.
+
+## Star Wars Wedge Antilles
+Get the number of a times a linked resource appears in an API endpoint.
