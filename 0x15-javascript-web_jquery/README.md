@@ -23,3 +23,6 @@ Update the text of an element when clicking on another.
 
 ## Star Wars Character
 Request data from a remote resource and add it to the document.
+
+## Star Wars Movies
+Populate an element with multiple children based on a remote resource.
