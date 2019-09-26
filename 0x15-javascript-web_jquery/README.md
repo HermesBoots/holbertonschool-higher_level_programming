@@ -8,3 +8,6 @@ Change the style of an element with jQuery.
 
 ## Click and Turn Red
 Change the style of an element when clicking on another.
+
+## Add `.red` Class
+Add a class to an element when clicking on another.
