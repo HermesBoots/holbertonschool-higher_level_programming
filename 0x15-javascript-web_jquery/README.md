@@ -11,3 +11,6 @@ Change the style of an element when clicking on another.
 
 ## Add `.red` Class
 Add a class to an element when clicking on another.
+
+## Toggle Classes
+Toggle classes on an element when clicking on another.
