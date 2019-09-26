@@ -14,3 +14,6 @@ Add a class to an element when clicking on another.
 
 ## Toggle Classes
 Toggle classes on an element when clicking on another.
+
+## List of Elements
+Add a new child to an element when clicking on another.
