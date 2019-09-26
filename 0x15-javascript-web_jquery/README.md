@@ -35,3 +35,6 @@ Run a script when the document is sufficiently loaded without jQuery.
 
 ## List, Add, Remove
 Support adding and removing elements from a list when clicking on other elements.
+
+## Say Hello to Everybody!
+Use a translation API to translate to a language given in a text box.
