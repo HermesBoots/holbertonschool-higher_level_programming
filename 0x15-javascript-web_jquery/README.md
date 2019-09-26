@@ -20,3 +20,6 @@ Add a new child to an element when clicking on another.
 
 ## Change the Text
 Update the text of an element when clicking on another.
+
+## Star Wars Character
+Request data from a remote resource and add it to the document.
