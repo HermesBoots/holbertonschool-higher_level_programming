@@ -38,3 +38,6 @@ Support adding and removing elements from a list when clicking on other elements
 
 ## Say Hello to Everybody!
 Use a translation API to translate to a language given in a text box.
+
+## And Press Enter
+Respond to both a button click and the Enter key press.
