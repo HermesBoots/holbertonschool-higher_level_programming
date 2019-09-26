@@ -26,3 +26,6 @@ Request data from a remote resource and add it to the document.
 
 ## Star Wars Movies
 Populate an element with multiple children based on a remote resource.
+
+## Say Hello!
+Make AJAX request when the document is sufficiently loaded.
