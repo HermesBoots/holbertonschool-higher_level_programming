@@ -17,3 +17,6 @@ Toggle classes on an element when clicking on another.
 
 ## List of Elements
 Add a new child to an element when clicking on another.
+
+## Change the Text
+Update the text of an element when clicking on another.
