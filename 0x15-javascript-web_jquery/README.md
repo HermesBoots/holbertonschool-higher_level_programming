@@ -29,3 +29,6 @@ Populate an element with multiple children based on a remote resource.
 
 ## Say Hello!
 Make AJAX request when the document is sufficiently loaded.
+
+## No jQuery - Document Loaded
+Run a script when the document is sufficiently loaded without jQuery.
