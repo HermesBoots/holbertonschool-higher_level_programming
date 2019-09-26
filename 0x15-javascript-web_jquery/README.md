@@ -32,3 +32,6 @@ Make AJAX request when the document is sufficiently loaded.
 
 ## No jQuery - Document Loaded
 Run a script when the document is sufficiently loaded without jQuery.
+
+## List, Add, Remove
+Support adding and removing elements from a list when clicking on other elements.
