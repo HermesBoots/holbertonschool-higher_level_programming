@@ -1,5 +1,5 @@
 function translate () {
-  const url = 'https://www.fourtonfish.com/hellosalut/hello/';
+  const url = 'https://www.fourtonfish.com/hellosalut/';
   const lang = $('input#language_code').val();
   $.getJSON(url, { lang: lang }, (body) => $('div#hello').text(body.hello));
 }
